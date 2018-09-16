@@ -34,7 +34,8 @@
             ],
             "scripts": [
               "node_modules/pace-js/pace.min.js",
-              "externaljs/sql.js"
+              "externaljs/sql.js",
+              "externaljs/sqlpersistent.js"
             ]
           },
           "configurations": {
