@@ -1,8 +1,17 @@
 <!DOCTYPE html><html><head>
   <meta charset="utf-8">
   <title>Literature awards</title>
-  <base href="/LiteraryAwards/"> 
-
+<!-- <base href="/"> -->
+<script>
+  var isCordovaApp = !!window.cordova;
+  var hrefApp=".";
+  if(!isCordovaApp){
+    var baseHref = window.location.href.split('/');
+    baseHref.pop();
+    hrefApp=baseHref.join('/') +'/';
+  }
+    document.write('<base href="' + hrefApp+ '" />');
+    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -21,4 +30,4 @@
   </div>
 
 
-<script type="text/javascript" src="runtime.6c158e6c1a86c079111c.js"></script><script type="text/javascript" src="polyfills.73491eb3bd76f4e1dc2e.js"></script><script type="text/javascript" src="scripts.bb9a54965b1c32f30d45.js"></script><script type="text/javascript" src="main.fdee7938db78ddeac78d.js"></script></body></html>
+<script type="text/javascript" src="runtime.6c158e6c1a86c079111c.js"></script><script type="text/javascript" src="polyfills.73491eb3bd76f4e1dc2e.js"></script><script type="text/javascript" src="scripts.bb9a54965b1c32f30d45.js"></script><script type="text/javascript" src="main.57b577846ce883a32dff.js"></script></body></html>
