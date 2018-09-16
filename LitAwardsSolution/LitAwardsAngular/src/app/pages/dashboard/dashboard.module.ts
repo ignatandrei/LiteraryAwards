@@ -6,12 +6,14 @@ import { DashboardComponent } from './dashboard.component';
 import { NobelService } from '../../@core/data/nobel.service';
 import { NbListModule } from '@nebular/theme';
 import { BookerService } from '../../@core/data/booker.service';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   imports: [
     ThemeModule,
-    NbListModule
+    NbListModule,
+    RouterModule
   ],
   declarations: [
     DashboardComponent,
@@ -19,6 +21,7 @@ import { BookerService } from '../../@core/data/booker.service';
   providers: [
     NobelService,
     BookerService
+    
   ],
 })
 export class DashboardModule { }
