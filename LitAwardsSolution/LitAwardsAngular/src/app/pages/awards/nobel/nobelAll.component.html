@@ -1,0 +1,69 @@
+<nb-card>
+  <nb-card-header>
+    Nobel prizes for literature
+  </nb-card-header>
+
+
+</nb-card>
+
+<br />
+<ng-template ngFor let-nobel [ngForOf]="source">
+
+
+
+
+  <nb-card>
+    <nb-card-header>
+      {{nobel.Laureate}} <img src='{{nobel.PictureUrl}}' />
+    </nb-card-header>
+    
+        
+
+      <nb-accordion multi>
+        
+        <nb-accordion-item>
+          <nb-accordion-item-header>Details</nb-accordion-item-header>
+          <nb-accordion-item-body>
+            <table>
+              <tr>
+                <td>
+                  Year
+                </td>
+                <td>
+                  {{nobel.Year}}
+                </td>
+      
+              </tr>
+              <tr>
+                <td>
+                  Reason
+                </td>
+                <td>
+                  {{nobel.Citation}}
+                </td>
+      
+              </tr>             
+            </table>
+      
+          </nb-accordion-item-body>
+        </nb-accordion-item>
+        <nb-accordion-item (collapsedChange)="changeVisible($event, nobel.name)"  > 
+          <nb-accordion-item-header>Books </nb-accordion-item-header>
+          <nb-accordion-item-body>
+              There are {{allBooks[nobel.name]?.length}} books              
+          </nb-accordion-item-body>
+        </nb-accordion-item>
+      </nb-accordion>
+      
+      <nb-list [style.display]="visibleBooks[nobel.name] ? '' : 'none'">
+          <nb-list-item *ngFor="let book of allBooks[nobel.name];let i=index">
+            {{i+1}} ) {{ book.bookName }}
+          </nb-list-item>
+        </nb-list>
+
+    
+  </nb-card>
+
+
+
+</ng-template>
