@@ -19,6 +19,8 @@ import { NbSearchService } from '@nebular/theme';
 
 
 
+
+
 @NgModule({
   declarations: [AppComponent],
   imports: [    
@@ -28,7 +30,7 @@ import { NbSearchService } from '@nebular/theme';
     AppRoutingModule,    
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
-    CoreModule.forRoot(),
+    CoreModule.forRoot(),    
   ],
   bootstrap: [AppComponent],
   providers: [

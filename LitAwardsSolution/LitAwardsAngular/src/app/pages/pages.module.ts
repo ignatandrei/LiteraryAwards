@@ -8,6 +8,7 @@ import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NbListModule } from '@nebular/theme/';
 
+
 const PAGES_COMPONENTS = [
   PagesComponent,
 ];
@@ -19,7 +20,7 @@ const PAGES_COMPONENTS = [
     DashboardModule,
     MiscellaneousModule,
     NgbModule.forRoot(),
-    NbListModule,
+    NbListModule,    
   ],
   declarations: [
     ...PAGES_COMPONENTS,
