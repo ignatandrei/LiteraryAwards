@@ -6,6 +6,6 @@ node node_modules\angular-cli-ghpages\bin\angular-cli-ghpages
 
 cd ..
 robocopy LitAwardsAngular/dist artefacts/dist /MIR /XD
-robocopy LitAwardsAngular/dist LitAwardsCordova/www/dist  /MIR /XD
+robocopy LitAwardsAngular/dist LiteraryAwardsCordova/www/dist  /MIR /XD
 pause
 exit
