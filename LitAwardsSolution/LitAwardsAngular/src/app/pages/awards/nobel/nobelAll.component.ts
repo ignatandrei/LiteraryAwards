@@ -16,15 +16,18 @@ export class NobelTableComponent {
   allBooks = new Map<string,any[]>();
   visibleBooks= new Map<string,boolean>();
   constructor(private service: NobelService) {
-    var data= this.service.getData();
-    data.map(it=> {
-      this.visibleBooks.set(it.name,false);
-      this.allBooks.set(it.name,null);
-      //this.loadBooks(true,it.name);
-    }
-      );
-    
-    this.source = data;
+    var self=this;
+    this.service.CreateOrGetDb().then(()=>{
+      var data= self.service.getData();
+      data.map(it=> {
+        self.visibleBooks.set(it.name,false);
+        self.allBooks.set(it.name,null);
+        //this.loadBooks(true,it.name);
+      }
+        );
+      
+        self.source = data;
+    });
   }
   public changeVisible(it:boolean, name: string){
     this.loadBooks(true,name);

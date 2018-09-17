@@ -11,7 +11,7 @@ export class BookerAllComponent implements OnInit {
   constructor(private  booker: BookerService) { }
   nr=0;
   ngOnInit() {
-    this.nr = this.booker.numberBookerAuthors();
+    this.booker.CreateOrGetDb().then(()=>this.nr = this.booker.numberBookerAuthors());
   }
 
 }
