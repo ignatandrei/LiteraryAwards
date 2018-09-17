@@ -7,7 +7,7 @@ export class NobelService {
   dbPers: any;
   numberNobelAuthors(): number {
     let val = 0;
-    var stmt = this.dbPers.prepare("SELECT count(*) as Nr FROM table1");
+    var stmt = this.dbPers.prepare("SELECT count(*) as Nr FROM tableAuthors");
     while (stmt.step()) {
       //
       val = stmt.getAsObject()["Nr"];
@@ -20,7 +20,7 @@ export class NobelService {
     var data = [];
 
     var stmt = this.dbPers.prepare(
-      "SELECT * FROM booksNobel where name='" + s + "'"
+      "SELECT * FROM booksName where name='" + s + "'"
     ); //sql injection for in memory database?
     while (stmt.step()) {
       //
@@ -36,7 +36,7 @@ export class NobelService {
   
   getData(): any[] {
     var data = [];    
-    var stmt = this.dbPers.prepare("SELECT * FROM table1");
+    var stmt = this.dbPers.prepare("SELECT * FROM tableAuthors order by Laureate");
     while (stmt.step()) {
       //
       var row = stmt.getAsObject();
@@ -53,7 +53,7 @@ export class NobelService {
     var self = this;
     
     this.dbPers = new SQL.PersistentDatabase(
-      "nobel_v11",
+      "nobel_v12",
       async function(sender) {
         // Initial creation of database if not found
 

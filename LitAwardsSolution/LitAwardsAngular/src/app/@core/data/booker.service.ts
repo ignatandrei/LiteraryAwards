@@ -7,7 +7,7 @@ export class BookerService {
   dbPers: any;
   numberBookerAuthors(): number {
     let val = 0;
-    var stmt = this.dbPers.prepare("SELECT count(*) as Nr FROM table1");
+    var stmt = this.dbPers.prepare("SELECT count(*) as Nr FROM tableAuthors");
     while (stmt.step()) {
       //
       val = stmt.getAsObject()["Nr"];
@@ -20,7 +20,7 @@ export class BookerService {
     var data = [];
 
     var stmt = this.dbPers.prepare(
-      "SELECT * FROM booksNobel where name='" + s + "'"
+      "SELECT * FROM bookName where name='" + s + "'"
     ); //sql injection for in memory database?
     while (stmt.step()) {
       //
@@ -37,7 +37,7 @@ export class BookerService {
   getData(): any[] {
     var data = [];
 
-    var stmt = this.dbPers.prepare("SELECT * FROM table1");
+    var stmt = this.dbPers.prepare("SELECT * FROM tableAuthors order by Author");
     while (stmt.step()) {
       //
       var row = stmt.getAsObject();
@@ -51,10 +51,10 @@ export class BookerService {
   async CreateOrGetDb(){
     var self=this;
     this.dbPers = new SQL.PersistentDatabase(
-      "booker_v3",
+      "booker_v12",
       async  function( sender) {
         // Initial creation of database if not found
-        window.alert('create');
+        //window.alert('create');
         await self.createDatabase(sender);
         sender.save();
       },
