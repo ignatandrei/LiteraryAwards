@@ -53,7 +53,7 @@ export class NobelService {
     var self = this;
     
     this.dbPers = new SQL.PersistentDatabase(
-      "nobel_v5",
+      "nobel_v11",
       async function(sender) {
         // Initial creation of database if not found
 
