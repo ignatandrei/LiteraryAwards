@@ -1,3 +1,72 @@
 <p>
   booker-all works! {{nr}}
 </p>
+<nb-card>
+  <nb-card-header>
+    Booker prizes 
+  </nb-card-header>
+
+
+</nb-card>
+
+<br />
+<ng-template ngFor let-author [ngForOf]="source">
+
+
+
+
+  <nb-card>
+    <nb-card-header>
+      {{author.Author}} 
+    </nb-card-header>
+    
+        
+
+      <nb-accordion multi>
+        
+        <nb-accordion-item>
+          <nb-accordion-item-header>Details</nb-accordion-item-header>
+          <nb-accordion-item-body>
+            <table>
+              <tr>
+                <td>
+                  Year
+                </td>
+                <td>
+                  {{author.Year}}
+                </td>
+      
+              </tr>
+              <tr>
+                <td>
+                  For :
+                </td>
+                <td>
+                  {{author.Title}}
+                </td>
+      
+              </tr>             
+            </table>
+      
+          </nb-accordion-item-body>
+        </nb-accordion-item>
+        <nb-accordion-item (collapsedChange)="changeVisible($event, author.Author)"  > 
+          <nb-accordion-item-header>Books </nb-accordion-item-header>
+          <nb-accordion-item-body>
+              There are {{allBooks[author.Author]?.length}} books for  {{author.Author}}              
+          </nb-accordion-item-body>
+        </nb-accordion-item>
+      </nb-accordion>
+      
+      <nb-list [style.display]="visibleBooks[author.Author] ? '' : 'none'">
+          <nb-list-item *ngFor="let book of allBooks[author.Author];let i=index">
+            {{i+1}} ) {{ book.bookName }}
+          </nb-list-item>
+        </nb-list>
+
+    
+  </nb-card>
+
+
+
+</ng-template>
