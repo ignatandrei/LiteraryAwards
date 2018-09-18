@@ -20,7 +20,7 @@ export class BookerService {
     var data = [];
 
     var stmt = this.dbPers.prepare(
-      "SELECT * FROM bookName where name='" + s + "'"
+      "SELECT * FROM booksName where name='" + s + "'"
     ); //sql injection for in memory database?
     while (stmt.step()) {
       //
@@ -51,7 +51,7 @@ export class BookerService {
   async CreateOrGetDb(){
     var self=this;
     this.dbPers = new SQL.PersistentDatabase(
-      "booker_v12",
+      "booker_v13",
       async  function( sender) {
         // Initial creation of database if not found
         //window.alert('create');

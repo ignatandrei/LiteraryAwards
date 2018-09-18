@@ -47,16 +47,16 @@
       
           </nb-accordion-item-body>
         </nb-accordion-item>
-        <nb-accordion-item (collapsedChange)="changeVisible($event, author.Author)"  > 
+        <nb-accordion-item (collapsedChange)="changeVisible($event, author.AuthorWiki)"  > 
           <nb-accordion-item-header>Books </nb-accordion-item-header>
           <nb-accordion-item-body>
-              There are {{allBooks[author.Author]?.length}} books for  {{author.Author}}              
+              There are {{allBooks[author.AuthorWiki]?.length}} books for  {{author.Author}}              
           </nb-accordion-item-body>
         </nb-accordion-item>
       </nb-accordion>
       
-      <nb-list [style.display]="visibleBooks[author.Author] ? '' : 'none'">
-          <nb-list-item *ngFor="let book of allBooks[author.Author];let i=index">
+      <nb-list [style.display]="visibleBooks[author.AuthorWiki] ? '' : 'none'">
+          <nb-list-item *ngFor="let book of allBooks[author.AuthorWiki];let i=index">
             {{i+1}} ) {{ book.bookName }}
           </nb-list-item>
         </nb-list>
