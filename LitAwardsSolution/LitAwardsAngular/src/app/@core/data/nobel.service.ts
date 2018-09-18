@@ -16,6 +16,20 @@ export class NobelService {
     stmt.free();
     return val;
   }
+  search(s:string):any[]{
+    var data = [];
+    
+    var stmt = this.dbPers.prepare(
+      "SELECT Laureate as Author, name as Name , 'Nobel' as Collection FROM tableAuthors where Laureate like '%" + s + "%'"
+    ); //sql injection for in memory database?
+    while (stmt.step()) {
+      //
+      var row = stmt.getAsObject();
+      data.push(row);
+    }
+    // window.alert(data.length);
+    return data;
+  }
   callByName(s: string): any[] {
     var data = [];
 

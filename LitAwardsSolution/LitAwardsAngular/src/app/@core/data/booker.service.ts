@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { BookerData } from "./booker.data";
+import { withModule } from "@angular/core/testing";
 declare var SQL: any;
 
 @Injectable()
@@ -15,6 +16,20 @@ export class BookerService {
 
     stmt.free();
     return val;
+  }
+  search(s:string):any[]{
+    var data = [];
+
+    var stmt = this.dbPers.prepare(
+      "SELECT Author, AuthorWiki as Name , 'Booker' as Collection FROM tableAuthors where name like '%" + s + "%'"
+    ); //sql injection for in memory database?
+    while (stmt.step()) {
+      //
+      var row = stmt.getAsObject();
+      data.push(row);
+    }
+    // window.alert(data.length);
+    return data;
   }
   callByName(s: string): any[] {
     var data = [];

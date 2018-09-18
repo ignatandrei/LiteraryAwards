@@ -74,6 +74,8 @@ export class DashboardComponent implements OnDestroy {
       },
     ],
   };
+  public searchTerm: string;
+  searchAuthors:any[];
   nobelAuthors: number;
   bookerAuthors: number;
   constructor(private themeService: NbThemeService, private search:NbSearchService, private nobel: NobelService, private booker: BookerService) {
@@ -86,6 +88,16 @@ export class DashboardComponent implements OnDestroy {
     this.search.onSearchSubmit().subscribe(it=>{
         
       self.searchTerm=it.term;
+      self.searchAuthors = [];
+      window.alert(self.searchTerm.length);
+      if(self.searchTerm.length > 0 ){
+        var dataSearched=  booker.search(self.searchTerm);
+        dataSearched.push(...nobel.search(self.searchTerm));
+
+        self.searchAuthors = dataSearched.sort((a,b)=>{
+          return  a.Author.localeCompare(b.Author);          
+        });
+      }
        });
        
        this.nobel.CreateOrGetDb();//.then(()=>self.nobelAuthors =nobel.numberNobelAuthors());
@@ -95,7 +107,7 @@ export class DashboardComponent implements OnDestroy {
         self.bookerAuthors=booker.numberBookerAuthors();
        },3000);
   }
-  public searchTerm: string;
+  
   ngOnDestroy() {
     this.alive = false;
   }

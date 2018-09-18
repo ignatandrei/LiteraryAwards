@@ -2,7 +2,8 @@
 
   <nb-card>
     <nb-card-header>Literature awards from all over the world.</nb-card-header>
-    <nb-card-body>Search {{searchTerm}} </nb-card-body>
+    <nb-card-body>
+    </nb-card-body>
   </nb-card>
 </div>
 <div class="row">
@@ -26,3 +27,15 @@
   </nb-card>
 
 </div>
+<div class="row" *ngIf="searchAuthors?.length>0" >
+  Found {{searchAuthors?.length}} of {{searchTerm}}       
+</div>
+<div class="row" *ngFor="let a of searchAuthors;let i=index;">
+  <nb-card>
+    <nb-card-header>{{i+1}} {{a.Author}}</nb-card-header>
+    <nb-card-body>
+      from <a routerLink ='/pages/awards/{{a.Collection | lowercase }}'>{{a.Collection}} </a>
+    </nb-card-body>
+  </nb-card>
+</div>
+
