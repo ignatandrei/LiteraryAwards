@@ -89,7 +89,7 @@ export class DashboardComponent implements OnDestroy {
         
       self.searchTerm=it.term;
       self.searchAuthors = [];
-      window.alert(self.searchTerm.length);
+      //window.alert(self.searchTerm.length);
       if(self.searchTerm.length > 0 ){
         var dataSearched=  booker.search(self.searchTerm);
         dataSearched.push(...nobel.search(self.searchTerm));
@@ -107,7 +107,9 @@ export class DashboardComponent implements OnDestroy {
         self.bookerAuthors=booker.numberBookerAuthors();
        },3000);
   }
-  
+  showSearch(){
+    this.search.activateSearch(this.searchTerm);
+  }
   ngOnDestroy() {
     this.alive = false;
   }

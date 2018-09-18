@@ -3,6 +3,7 @@
   <nb-card>
     <nb-card-header>Literature awards from all over the world.</nb-card-header>
     <nb-card-body>
+      <a (click)='showSearch()'>Click / tap here to search</a>
     </nb-card-body>
   </nb-card>
 </div>
@@ -27,7 +28,7 @@
   </nb-card>
 
 </div>
-<div class="row" *ngIf="searchAuthors?.length>0" >
+<div class="row" *ngIf="searchTerm?.length>0" >
   Found {{searchAuthors?.length}} of {{searchTerm}}       
 </div>
 <div class="row" *ngFor="let a of searchAuthors;let i=index;">
