@@ -7,6 +7,7 @@ import { NobelService } from '../../@core/data/nobel.service';
 import { NbListModule } from '@nebular/theme';
 import { BookerService } from '../../@core/data/booker.service';
 import { RouterModule } from '@angular/router';
+import { BGService } from '../../@core/data/bg.service';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { RouterModule } from '@angular/router';
   ],
   providers: [
     NobelService,
-    BookerService
+    BookerService,
+    BGService
     
   ],
 })

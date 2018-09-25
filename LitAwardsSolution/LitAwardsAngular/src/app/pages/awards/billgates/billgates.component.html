@@ -1,0 +1,24 @@
+<p>
+
+</p>
+<nb-card>
+  <nb-card-header>
+    Books taken from <a href='https://www.gatesnotes.com/Books#All'>Bill Gates</a> reviews
+  </nb-card-header>
+
+
+</nb-card>
+<ng-template ngFor let-author [ngForOf]="source">
+
+
+
+
+  <nb-card>
+    <nb-card-header>
+      Author: {{author.Author}}
+    </nb-card-header>
+    <nb-card-body>
+      Book : {{author.bookName}}
+    </nb-card-body>
+  </nb-card>
+</ng-template>

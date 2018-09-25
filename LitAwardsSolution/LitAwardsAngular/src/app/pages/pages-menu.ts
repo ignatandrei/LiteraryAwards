@@ -49,6 +49,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
         
         link: '/pages/awards/booker',
       },
+      {
+        title: 'Bill Gates books',
+        
+        link: '/pages/awards/bg',
+      },
     ],
   },
 ];

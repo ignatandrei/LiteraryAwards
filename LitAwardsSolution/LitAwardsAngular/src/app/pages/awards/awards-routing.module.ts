@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AwardsComponent } from './awards.component';
 import { NobelTableComponent  } from './nobel/nobelAll.component';
 import { BookerAllComponent } from './booker/booker-all.component';
+import { BillgatesComponent } from './billgates/billgates.component';
 
 const routes: Routes = [{
   path: '',
@@ -11,6 +12,10 @@ const routes: Routes = [{
   children: [{
     path: 'nobel',
     component: NobelTableComponent ,
+  },
+  {
+    path: 'bg',
+    component: BillgatesComponent ,
   },{
     path: 'booker',
     component: BookerAllComponent,
@@ -27,5 +32,6 @@ export class TablesRoutingModule { }
 export const routedComponents = [
   AwardsComponent ,
   NobelTableComponent ,
-  BookerAllComponent
+  BookerAllComponent,
+  BillgatesComponent
 ];

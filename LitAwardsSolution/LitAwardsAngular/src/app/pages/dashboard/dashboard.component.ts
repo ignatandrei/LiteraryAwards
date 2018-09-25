@@ -3,6 +3,7 @@ import { NbThemeService, NbSearchService } from '@nebular/theme';
 import { takeWhile } from 'rxjs/operators/takeWhile' ;
 import { NobelService } from '../../@core/data/nobel.service';
 import { BookerService } from '../../@core/data/booker.service';
+import { BGService } from '../../@core/data/bg.service';
 
 interface CardSettings {
   title: string;
@@ -78,7 +79,13 @@ export class DashboardComponent implements OnDestroy {
   searchAuthors:any[];
   nobelAuthors: number;
   bookerAuthors: number;
-  constructor(private themeService: NbThemeService, private search:NbSearchService, private nobel: NobelService, private booker: BookerService) {
+  BGAuthors: number;
+  constructor(private themeService: NbThemeService, 
+    private search:NbSearchService, 
+    private nobel: NobelService, 
+    private booker: BookerService,
+    private bg: BGService
+    ) {
     var self=this;
     this.themeService.getJsTheme()
       .pipe(takeWhile(() => this.alive))
@@ -102,9 +109,11 @@ export class DashboardComponent implements OnDestroy {
        
        this.nobel.CreateOrGetDb();//.then(()=>self.nobelAuthors =nobel.numberNobelAuthors());
        this.booker.CreateOrGetDb();//.then(()=>self.bookerAuthors=booker.numberBookerAuthors());
+       this.bg.CreateOrGetDb();
        window.setTimeout  (function(){
         self.nobelAuthors =nobel.numberNobelAuthors();
         self.bookerAuthors=booker.numberBookerAuthors();
+        self.BGAuthors=bg.numberBGAuthors();
        },3000);
   }
   showSearch(){
