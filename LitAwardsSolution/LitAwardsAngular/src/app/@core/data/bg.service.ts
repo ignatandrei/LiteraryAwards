@@ -32,6 +32,20 @@ export class BGService {
         
       }
 
+      search(s:string):any[]{
+        var data = [];
+    
+        var stmt = this.dbBG.prepare(
+          "SELECT Author  , 'Bill Gates' as Collection FROM tableAuthors where Author like '%" + s + "%'"
+        ); //sql injection for in memory database?
+        while (stmt.step()) {
+          //
+          var row = stmt.getAsObject();
+          data.push(row);
+        }
+         //window.alert(data.length);
+        return data;
+      }
       async CreateOrGetDb() {
         var self = this;
         

@@ -100,7 +100,7 @@ export class DashboardComponent implements OnDestroy {
       if(self.searchTerm.length > 0 ){
         var dataSearched=  booker.search(self.searchTerm);
         dataSearched.push(...nobel.search(self.searchTerm));
-
+        dataSearched.push(...bg.search(self.searchTerm));
         self.searchAuthors = dataSearched.sort((a,b)=>{
           return  a.Author.localeCompare(b.Author);          
         });
