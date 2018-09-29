@@ -9,11 +9,12 @@ import { BGService } from '../../../@core/data/bg.service';
 export class BillgatesComponent implements OnInit {
 
   source:any[];
-  constructor(bg:BGService) { 
-    this.source=bg.getData();
+  constructor(public bg:BGService) { 
+   
   }
 
   ngOnInit() {
+    this.source=this.bg.getData();
   }
 
 }

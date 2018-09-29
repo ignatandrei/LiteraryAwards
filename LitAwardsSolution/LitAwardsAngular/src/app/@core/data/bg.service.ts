@@ -1,11 +1,14 @@
 import { Injectable } from "@angular/core";
 import { BookerData } from "./booker.data";
+import { environment } from "../../../environments/environment";
 
 declare var SQL: any;
 
 @Injectable()
 export class BGService {
+  
     dbBG: any;
+    public version: string = environment.VERSION;
     numberBGAuthors():number{
         let val = 0;
     var stmt = this.dbBG.prepare("SELECT count(*) as Nr FROM tableAuthors");
@@ -50,7 +53,7 @@ export class BGService {
         var self = this;
         
         this.dbBG = new SQL.PersistentDatabase(
-          "BG_v12",
+          "BG_v"+this.version,
           async function(sender) {
             // Initial creation of database if not found
     

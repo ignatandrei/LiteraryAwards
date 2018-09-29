@@ -1,9 +1,10 @@
-import {Component, OnDestroy} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import { NbThemeService, NbSearchService } from '@nebular/theme';
 import { takeWhile } from 'rxjs/operators/takeWhile' ;
 import { NobelService } from '../../@core/data/nobel.service';
 import { BookerService } from '../../@core/data/booker.service';
 import { BGService } from '../../@core/data/bg.service';
+import { environment } from '../../../environments/environment';
 
 interface CardSettings {
   title: string;
@@ -15,10 +16,10 @@ interface CardSettings {
   selector: 'ngx-dashboard',
   templateUrl: './dashboard.component.html',
 })
-export class DashboardComponent implements OnDestroy {
-
+export class DashboardComponent implements OnDestroy , OnInit{
+  
   private alive = true;
-
+  
   lightCard: CardSettings = {
     title: 'Light',
     iconClass: 'nb-lightbulb',
@@ -107,15 +108,20 @@ export class DashboardComponent implements OnDestroy {
       }
        });
        
-       this.nobel.CreateOrGetDb();//.then(()=>self.nobelAuthors =nobel.numberNobelAuthors());
-       this.booker.CreateOrGetDb();//.then(()=>self.bookerAuthors=booker.numberBookerAuthors());
-       this.bg.CreateOrGetDb();
-       window.setTimeout  (function(){
-        self.nobelAuthors =nobel.numberNobelAuthors();
-        self.bookerAuthors=booker.numberBookerAuthors();
-        self.BGAuthors=bg.numberBGAuthors();
-       },3000);
+      
   }
+  ngOnInit(): void {
+   var self=this;
+    this.nobel.CreateOrGetDb();//.then(()=>self.nobelAuthors =nobel.numberNobelAuthors());
+    this.booker.CreateOrGetDb();//.then(()=>self.bookerAuthors=booker.numberBookerAuthors());
+    this.bg.CreateOrGetDb();
+    window.setTimeout  (function(){
+     self.nobelAuthors =self.nobel.numberNobelAuthors();
+     self.bookerAuthors=self.booker.numberBookerAuthors();
+     self.BGAuthors=self.bg.numberBGAuthors();
+    },3000);
+  }
+
   showSearch(){
     this.search.activateSearch(this.searchTerm);
   }

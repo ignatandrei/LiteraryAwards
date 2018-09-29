@@ -1,10 +1,12 @@
 import { Injectable } from "@angular/core";
 import { initChangeDetectorIfExisting } from "@angular/core/src/render3/instructions";
+import { environment } from "../../../environments/environment";
 declare var SQL: any;
 
 @Injectable()
 export class NobelService {
   dbPers: any;
+  public version: string = environment.VERSION;
   numberNobelAuthors(): number {
     let val = 0;
     var stmt = this.dbPers.prepare("SELECT count(*) as Nr FROM tableAuthors");
@@ -67,7 +69,7 @@ export class NobelService {
     var self = this;
     
     this.dbPers = new SQL.PersistentDatabase(
-      "nobel_v12",
+      "nobel_v"+this.version,
       async function(sender) {
         // Initial creation of database if not found
 

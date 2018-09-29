@@ -1,11 +1,14 @@
 import { Injectable } from "@angular/core";
 import { BookerData } from "./booker.data";
 import { withModule } from "@angular/core/testing";
+import { environment } from "../../../environments/environment";
+
 declare var SQL: any;
 
 @Injectable()
 export class BookerService {
   dbPers: any;
+  public version: string = environment.VERSION;
   numberBookerAuthors(): number {
     let val = 0;
     var stmt = this.dbPers.prepare("SELECT count(*) as Nr FROM tableAuthors");
@@ -66,7 +69,7 @@ export class BookerService {
   async CreateOrGetDb(){
     var self=this;
     this.dbPers = new SQL.PersistentDatabase(
-      "booker_v13",
+      "booker_v"+this.version,
       async  function( sender) {
         // Initial creation of database if not found
         //window.alert('create');
