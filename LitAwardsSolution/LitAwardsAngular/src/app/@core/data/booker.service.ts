@@ -22,10 +22,14 @@ export class BookerService {
   }
   search(s:string):any[]{
     var data = [];
-
-    var stmt = this.dbPers.prepare(
-      "SELECT Author, AuthorWiki as Name , 'Booker' as Collection FROM tableAuthors where name like '%" + s + "%'"
-    ); //sql injection for in memory database?
+    let sql="SELECT Author, AuthorWiki as Name , 'Booker' as Collection FROM tableAuthors";
+    if(s != null && s.length>0 ){
+       //sql injection for in memory database?
+        sql +=" where name like '%" + s + "%'";
+    };
+    
+    var stmt = this.dbPers.prepare(sql);
+    
     while (stmt.step()) {
       //
       var row = stmt.getAsObject();

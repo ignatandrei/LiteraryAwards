@@ -5,6 +5,7 @@ import { NobelService } from '../../@core/data/nobel.service';
 import { BookerService } from '../../@core/data/booker.service';
 import { BGService } from '../../@core/data/bg.service';
 import { environment } from '../../../environments/environment';
+import { AuthorsService } from '../../@core/data/authors.service';
 
 interface CardSettings {
   title: string;
@@ -85,7 +86,8 @@ export class DashboardComponent implements OnDestroy , OnInit{
     private search:NbSearchService, 
     private nobel: NobelService, 
     private booker: BookerService,
-    private bg: BGService
+    private bg: BGService,
+    private gameService: AuthorsService
     ) {
     var self=this;
     this.themeService.getJsTheme()
@@ -99,9 +101,9 @@ export class DashboardComponent implements OnDestroy , OnInit{
       self.searchAuthors = [];
       //window.alert(self.searchTerm.length);
       if(self.searchTerm.length > 0 ){
-        var dataSearched=  booker.search(self.searchTerm);
-        dataSearched.push(...nobel.search(self.searchTerm));
-        dataSearched.push(...bg.search(self.searchTerm));
+        var dataSearched=  self.booker.search(self.searchTerm);
+        dataSearched.push(...self.nobel.search(self.searchTerm));
+        dataSearched.push(...self.bg.search(self.searchTerm));
         self.searchAuthors = dataSearched.sort((a,b)=>{
           return  a.Author.localeCompare(b.Author);          
         });
@@ -115,10 +117,12 @@ export class DashboardComponent implements OnDestroy , OnInit{
     this.nobel.CreateOrGetDb();//.then(()=>self.nobelAuthors =nobel.numberNobelAuthors());
     this.booker.CreateOrGetDb();//.then(()=>self.bookerAuthors=booker.numberBookerAuthors());
     this.bg.CreateOrGetDb();
+    //TODO: wait async for all, instead of waiting 3 seconds
     window.setTimeout  (function(){
      self.nobelAuthors =self.nobel.numberNobelAuthors();
      self.bookerAuthors=self.booker.numberBookerAuthors();
      self.BGAuthors=self.bg.numberBGAuthors();
+     self.gameService.CreateOrGetDb();
     },3000);
   }
 

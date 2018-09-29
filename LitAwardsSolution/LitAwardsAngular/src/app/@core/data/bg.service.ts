@@ -37,10 +37,12 @@ export class BGService {
 
       search(s:string):any[]{
         var data = [];
-    
-        var stmt = this.dbBG.prepare(
-          "SELECT Author  , 'Bill Gates' as Collection FROM tableAuthors where Author like '%" + s + "%'"
-        ); //sql injection for in memory database?
+        let sql="SELECT Author  , 'Bill Gates' as Collection FROM tableAuthors ";
+        if(s != null && s.length>0 ){
+           //sql injection for in memory database?
+            sql +="where Author like '%" + s + "%'";
+        }
+        var stmt = this.dbBG.prepare(sql);
         while (stmt.step()) {
           //
           var row = stmt.getAsObject();
