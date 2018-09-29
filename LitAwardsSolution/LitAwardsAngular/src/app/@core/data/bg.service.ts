@@ -50,7 +50,7 @@ export class BGService {
         var self = this;
         
         this.dbBG = new SQL.PersistentDatabase(
-          "BG_v5",
+          "BG_v12",
           async function(sender) {
             // Initial creation of database if not found
     

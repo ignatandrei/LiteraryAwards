@@ -10,7 +10,7 @@ export class BookerData {
   }
   private CreateTables(db: any) {
     
-    db.run("CREATE TABLE tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki);");
+    db.run("CREATE TABLE tableAuthors  (id INTEGER PRIMARY KEY AUTOINCREMENT ,Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki);");
     db.run("CREATE TABLE booksName (bookName,name);");
   }
   private RunLaureates(db: any) {
@@ -18,109 +18,109 @@ export class BookerData {
 
 
  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1969','P. H. Newby&#91;32&#93;','Something to Answer For','Novel','United Kingdom','P._H._Newby','https://en.wikipedia.org/wiki/P._H._Newby']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1969','P. H. Newby&#91;32&#93;','Something to Answer For','Novel','United Kingdom','P._H._Newby','https://en.wikipedia.org/wiki/P._H._Newby']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1970','Bernice Rubens&#91;33&#93;','The Elected Member','Novel','United Kingdom','Bernice_Rubens','https://en.wikipedia.org/wiki/Bernice_Rubens']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1970','Bernice Rubens&#91;33&#93;','The Elected Member','Novel','United Kingdom','Bernice_Rubens','https://en.wikipedia.org/wiki/Bernice_Rubens']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1970 (retrospective award&#91;a&#93;)','J. G. Farrell','Troubles','Novel','United KingdomIreland','J._G._Farrell','https://en.wikipedia.org/wiki/J._G._Farrell']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1970 (retrospective award&#91;a&#93;)','J. G. Farrell','Troubles','Novel','United KingdomIreland','J._G._Farrell','https://en.wikipedia.org/wiki/J._G._Farrell']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1971','V. S. Naipaul&#91;34&#93;','In a Free State','Short story','United KingdomTrinidad and Tobago','V._S._Naipaul','https://en.wikipedia.org/wiki/V._S._Naipaul']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1971','V. S. Naipaul&#91;34&#93;','In a Free State','Short story','United KingdomTrinidad and Tobago','V._S._Naipaul','https://en.wikipedia.org/wiki/V._S._Naipaul']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1972','John Berger&#91;35&#93;','G.','Experimental novel','United Kingdom','John_Berger','https://en.wikipedia.org/wiki/John_Berger']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1972','John Berger&#91;35&#93;','G.','Experimental novel','United Kingdom','John_Berger','https://en.wikipedia.org/wiki/John_Berger']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1973','J. G. Farrell&#91;36&#93;','The Siege of Krishnapur','Novel','United KingdomIreland','J._G._Farrell','https://en.wikipedia.org/wiki/J._G._Farrell']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1973','J. G. Farrell&#91;36&#93;','The Siege of Krishnapur','Novel','United KingdomIreland','J._G._Farrell','https://en.wikipedia.org/wiki/J._G._Farrell']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1974','Nadine Gordimer&#91;37&#93;','The Conservationist','Novel','South Africa','Nadine_Gordimer','https://en.wikipedia.org/wiki/Nadine_Gordimer']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1974','Nadine Gordimer&#91;37&#93;','The Conservationist','Novel','South Africa','Nadine_Gordimer','https://en.wikipedia.org/wiki/Nadine_Gordimer']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['Stanley Middleton&#91;38&#93;','Holiday','Novel','United Kingdom','<a href="/wiki/Stanley_Middleton" title="Stanley Middleton">Stanley Middleton</a><sup id="cite_ref-Middleton_39-0" class="reference"><a href="#cite_note-Middleton-39">&#91;38&#93;</a></sup>','Novel','https://en.wikipedia.orgNovel']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['Stanley Middleton&#91;38&#93;','Holiday','Novel','United Kingdom','<a href="/wiki/Stanley_Middleton" title="Stanley Middleton">Stanley Middleton</a><sup id="cite_ref-Middleton_39-0" class="reference"><a href="#cite_note-Middleton-39">&#91;38&#93;</a></sup>','Novel','https://en.wikipedia.orgNovel']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1975','Ruth Prawer Jhabvala','Heat and Dust','Historical novel','United KingdomGermany','Ruth_Prawer_Jhabvala','https://en.wikipedia.org/wiki/Ruth_Prawer_Jhabvala']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1975','Ruth Prawer Jhabvala','Heat and Dust','Historical novel','United KingdomGermany','Ruth_Prawer_Jhabvala','https://en.wikipedia.org/wiki/Ruth_Prawer_Jhabvala']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1976','David Storey&#91;39&#93;','Saville','Novel','United Kingdom','David_Storey','https://en.wikipedia.org/wiki/David_Storey']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1976','David Storey&#91;39&#93;','Saville','Novel','United Kingdom','David_Storey','https://en.wikipedia.org/wiki/David_Storey']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1977','Paul Scott&#91;40&#93;','Staying On','Novel','United Kingdom','Paul_Mark_Scott','https://en.wikipedia.org/wiki/Paul_Mark_Scott']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1977','Paul Scott&#91;40&#93;','Staying On','Novel','United Kingdom','Paul_Mark_Scott','https://en.wikipedia.org/wiki/Paul_Mark_Scott']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1978','Iris Murdoch&#91;41&#93;','The Sea, the Sea','Philosophical novel','IrelandUnited Kingdom','Iris_Murdoch','https://en.wikipedia.org/wiki/Iris_Murdoch']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1978','Iris Murdoch&#91;41&#93;','The Sea, the Sea','Philosophical novel','IrelandUnited Kingdom','Iris_Murdoch','https://en.wikipedia.org/wiki/Iris_Murdoch']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1979','Penelope Fitzgerald&#91;42&#93;','Offshore','Novel','United Kingdom','Penelope_Fitzgerald','https://en.wikipedia.org/wiki/Penelope_Fitzgerald']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1979','Penelope Fitzgerald&#91;42&#93;','Offshore','Novel','United Kingdom','Penelope_Fitzgerald','https://en.wikipedia.org/wiki/Penelope_Fitzgerald']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1980','William Golding&#91;43&#93;','Rites of Passage','Novel','United Kingdom','William_Golding','https://en.wikipedia.org/wiki/William_Golding']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1980','William Golding&#91;43&#93;','Rites of Passage','Novel','United Kingdom','William_Golding','https://en.wikipedia.org/wiki/William_Golding']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1981','Salman Rushdie&#91;44&#93;','Midnight\'s Children','Magic realism','India then United Kingdom','Salman_Rushdie','https://en.wikipedia.org/wiki/Salman_Rushdie']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1981','Salman Rushdie&#91;44&#93;','Midnight\'s Children','Magic realism','India then United Kingdom','Salman_Rushdie','https://en.wikipedia.org/wiki/Salman_Rushdie']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1982','Thomas Keneally&#91;45&#93;','Schindler\'s Ark','Biographical novel','Australia','Thomas_Keneally','https://en.wikipedia.org/wiki/Thomas_Keneally']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1982','Thomas Keneally&#91;45&#93;','Schindler\'s Ark','Biographical novel','Australia','Thomas_Keneally','https://en.wikipedia.org/wiki/Thomas_Keneally']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1983','J. M. Coetzee&#91;46&#93;','Life &amp; Times of Michael K','Novel','South Africa','J._M._Coetzee','https://en.wikipedia.org/wiki/J._M._Coetzee']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1983','J. M. Coetzee&#91;46&#93;','Life &amp; Times of Michael K','Novel','South Africa','J._M._Coetzee','https://en.wikipedia.org/wiki/J._M._Coetzee']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1984','Anita Brookner&#91;47&#93;','Hotel du Lac','Novel','United Kingdom','Anita_Brookner','https://en.wikipedia.org/wiki/Anita_Brookner']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1984','Anita Brookner&#91;47&#93;','Hotel du Lac','Novel','United Kingdom','Anita_Brookner','https://en.wikipedia.org/wiki/Anita_Brookner']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1985','Keri Hulme&#91;48&#93;','The Bone People','Mystery novel','New Zealand','Keri_Hulme','https://en.wikipedia.org/wiki/Keri_Hulme']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1985','Keri Hulme&#91;48&#93;','The Bone People','Mystery novel','New Zealand','Keri_Hulme','https://en.wikipedia.org/wiki/Keri_Hulme']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1986','Kingsley Amis&#91;49&#93;','The Old Devils','Comic novel','United Kingdom','Kingsley_Amis','https://en.wikipedia.org/wiki/Kingsley_Amis']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1986','Kingsley Amis&#91;49&#93;','The Old Devils','Comic novel','United Kingdom','Kingsley_Amis','https://en.wikipedia.org/wiki/Kingsley_Amis']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1987','Penelope Lively&#91;50&#93;','Moon Tiger','Novel','United Kingdom','Penelope_Lively','https://en.wikipedia.org/wiki/Penelope_Lively']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1987','Penelope Lively&#91;50&#93;','Moon Tiger','Novel','United Kingdom','Penelope_Lively','https://en.wikipedia.org/wiki/Penelope_Lively']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1988','Peter Carey&#91;51&#93;','Oscar and Lucinda','Historical novel','Australia','Peter_Carey_(novelist)','https://en.wikipedia.org/wiki/Peter_Carey_(novelist)']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1988','Peter Carey&#91;51&#93;','Oscar and Lucinda','Historical novel','Australia','Peter_Carey_(novelist)','https://en.wikipedia.org/wiki/Peter_Carey_(novelist)']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1989','Kazuo Ishiguro&#91;52&#93;','The Remains of the Day','Historical novel','United Kingdom','Kazuo_Ishiguro','https://en.wikipedia.org/wiki/Kazuo_Ishiguro']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1989','Kazuo Ishiguro&#91;52&#93;','The Remains of the Day','Historical novel','United Kingdom','Kazuo_Ishiguro','https://en.wikipedia.org/wiki/Kazuo_Ishiguro']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1990','A. S. Byatt','Possession','Historical novel','United Kingdom','A._S._Byatt','https://en.wikipedia.org/wiki/A._S._Byatt']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1990','A. S. Byatt','Possession','Historical novel','United Kingdom','A._S._Byatt','https://en.wikipedia.org/wiki/A._S._Byatt']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1991','Ben Okri&#91;53&#93;','The Famished Road','Magic realism','Nigeria','Ben_Okri','https://en.wikipedia.org/wiki/Ben_Okri']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1991','Ben Okri&#91;53&#93;','The Famished Road','Magic realism','Nigeria','Ben_Okri','https://en.wikipedia.org/wiki/Ben_Okri']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1992','Michael Ondaatje&#91;54&#93;','The English Patient','Historiographic metafiction','Canada','Michael_Ondaatje','https://en.wikipedia.org/wiki/Michael_Ondaatje']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1992','Michael Ondaatje&#91;54&#93;','The English Patient','Historiographic metafiction','Canada','Michael_Ondaatje','https://en.wikipedia.org/wiki/Michael_Ondaatje']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['Barry Unsworth&#91;55&#93;','Sacred Hunger','Historical novel','United Kingdom','<a href="/wiki/Barry_Unsworth" title="Barry Unsworth">Barry Unsworth</a><sup id="cite_ref-Hunger_56-0" class="reference"><a href="#cite_note-Hunger-56">&#91;55&#93;</a></sup>','Historical novel','https://en.wikipedia.orgHistorical novel']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['Barry Unsworth&#91;55&#93;','Sacred Hunger','Historical novel','United Kingdom','<a href="/wiki/Barry_Unsworth" title="Barry Unsworth">Barry Unsworth</a><sup id="cite_ref-Hunger_56-0" class="reference"><a href="#cite_note-Hunger-56">&#91;55&#93;</a></sup>','Historical novel','https://en.wikipedia.orgHistorical novel']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1993','Roddy Doyle','Paddy Clarke Ha Ha Ha','Novel','Ireland','Roddy_Doyle','https://en.wikipedia.org/wiki/Roddy_Doyle']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1993','Roddy Doyle','Paddy Clarke Ha Ha Ha','Novel','Ireland','Roddy_Doyle','https://en.wikipedia.org/wiki/Roddy_Doyle']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1994','James Kelman&#91;56&#93;','How Late It Was, How Late','Stream of consciousness','United Kingdom','James_Kelman','https://en.wikipedia.org/wiki/James_Kelman']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1994','James Kelman&#91;56&#93;','How Late It Was, How Late','Stream of consciousness','United Kingdom','James_Kelman','https://en.wikipedia.org/wiki/James_Kelman']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1995','Pat Barker&#91;57&#93;','The Ghost Road','War novel','United Kingdom','Pat_Barker','https://en.wikipedia.org/wiki/Pat_Barker']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1995','Pat Barker&#91;57&#93;','The Ghost Road','War novel','United Kingdom','Pat_Barker','https://en.wikipedia.org/wiki/Pat_Barker']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1996','Graham Swift&#91;58&#93;','Last Orders','Novel','United Kingdom','Graham_Swift','https://en.wikipedia.org/wiki/Graham_Swift']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1996','Graham Swift&#91;58&#93;','Last Orders','Novel','United Kingdom','Graham_Swift','https://en.wikipedia.org/wiki/Graham_Swift']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1997','Arundhati Roy','The God of Small Things','Novel','India','Arundhati_Roy','https://en.wikipedia.org/wiki/Arundhati_Roy']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1997','Arundhati Roy','The God of Small Things','Novel','India','Arundhati_Roy','https://en.wikipedia.org/wiki/Arundhati_Roy']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1998','Ian McEwan&#91;59&#93;','Amsterdam','Novel','United Kingdom','Ian_McEwan','https://en.wikipedia.org/wiki/Ian_McEwan']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1998','Ian McEwan&#91;59&#93;','Amsterdam','Novel','United Kingdom','Ian_McEwan','https://en.wikipedia.org/wiki/Ian_McEwan']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['1999','J. M. Coetzee&#91;60&#93;','Disgrace','Novel','South Africa','J._M._Coetzee','https://en.wikipedia.org/wiki/J._M._Coetzee']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['1999','J. M. Coetzee&#91;60&#93;','Disgrace','Novel','South Africa','J._M._Coetzee','https://en.wikipedia.org/wiki/J._M._Coetzee']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2000','Margaret Atwood','The Blind Assassin','Historical novel','Canada','Margaret_Atwood','https://en.wikipedia.org/wiki/Margaret_Atwood']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2000','Margaret Atwood','The Blind Assassin','Historical novel','Canada','Margaret_Atwood','https://en.wikipedia.org/wiki/Margaret_Atwood']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2001','Peter Carey','True History of the Kelly Gang','Historical novel','Australia','Peter_Carey_(novelist)','https://en.wikipedia.org/wiki/Peter_Carey_(novelist)']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2001','Peter Carey','True History of the Kelly Gang','Historical novel','Australia','Peter_Carey_(novelist)','https://en.wikipedia.org/wiki/Peter_Carey_(novelist)']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2002','Yann Martel','Life of Pi','Fantasy and adventure novel','Canada','Yann_Martel','https://en.wikipedia.org/wiki/Yann_Martel']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2002','Yann Martel','Life of Pi','Fantasy and adventure novel','Canada','Yann_Martel','https://en.wikipedia.org/wiki/Yann_Martel']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2003','DBC Pierre','Vernon God Little','Black comedy','Australia','DBC_Pierre','https://en.wikipedia.org/wiki/DBC_Pierre']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2003','DBC Pierre','Vernon God Little','Black comedy','Australia','DBC_Pierre','https://en.wikipedia.org/wiki/DBC_Pierre']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2004','Alan Hollinghurst','The Line of Beauty','Historical novel','United Kingdom','Alan_Hollinghurst','https://en.wikipedia.org/wiki/Alan_Hollinghurst']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2004','Alan Hollinghurst','The Line of Beauty','Historical novel','United Kingdom','Alan_Hollinghurst','https://en.wikipedia.org/wiki/Alan_Hollinghurst']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2005','John Banville','The Sea','Novel','Ireland','John_Banville','https://en.wikipedia.org/wiki/John_Banville']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2005','John Banville','The Sea','Novel','Ireland','John_Banville','https://en.wikipedia.org/wiki/John_Banville']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2006','Kiran Desai','The Inheritance of Loss','Novel','India','Kiran_Desai','https://en.wikipedia.org/wiki/Kiran_Desai']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2006','Kiran Desai','The Inheritance of Loss','Novel','India','Kiran_Desai','https://en.wikipedia.org/wiki/Kiran_Desai']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2007','Anne Enright','The Gathering','Novel','Ireland','Anne_Enright','https://en.wikipedia.org/wiki/Anne_Enright']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2007','Anne Enright','The Gathering','Novel','Ireland','Anne_Enright','https://en.wikipedia.org/wiki/Anne_Enright']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2008','Aravind Adiga&#91;61&#93;','The White Tiger','Novel','India','Aravind_Adiga','https://en.wikipedia.org/wiki/Aravind_Adiga']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2008','Aravind Adiga&#91;61&#93;','The White Tiger','Novel','India','Aravind_Adiga','https://en.wikipedia.org/wiki/Aravind_Adiga']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2009','Hilary Mantel','Wolf Hall','Historical novel','United Kingdom','Hilary_Mantel','https://en.wikipedia.org/wiki/Hilary_Mantel']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2009','Hilary Mantel','Wolf Hall','Historical novel','United Kingdom','Hilary_Mantel','https://en.wikipedia.org/wiki/Hilary_Mantel']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2010','Howard Jacobson','The Finkler Question','Comic novel','United Kingdom','Howard_Jacobson','https://en.wikipedia.org/wiki/Howard_Jacobson']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2010','Howard Jacobson','The Finkler Question','Comic novel','United Kingdom','Howard_Jacobson','https://en.wikipedia.org/wiki/Howard_Jacobson']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2011','Julian Barnes','The Sense of an Ending','Novel','United Kingdom','Julian_Barnes','https://en.wikipedia.org/wiki/Julian_Barnes']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2011','Julian Barnes','The Sense of an Ending','Novel','United Kingdom','Julian_Barnes','https://en.wikipedia.org/wiki/Julian_Barnes']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2012','Hilary Mantel','Bring Up the Bodies','Historical novel','United Kingdom','Hilary_Mantel','https://en.wikipedia.org/wiki/Hilary_Mantel']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2012','Hilary Mantel','Bring Up the Bodies','Historical novel','United Kingdom','Hilary_Mantel','https://en.wikipedia.org/wiki/Hilary_Mantel']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2013','Eleanor Catton','The Luminaries','Historical novel','New Zealand','Eleanor_Catton','https://en.wikipedia.org/wiki/Eleanor_Catton']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2013','Eleanor Catton','The Luminaries','Historical novel','New Zealand','Eleanor_Catton','https://en.wikipedia.org/wiki/Eleanor_Catton']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2014','Richard Flanagan','The Narrow Road to the Deep North','Historical novel','Australia','Richard_Flanagan','https://en.wikipedia.org/wiki/Richard_Flanagan']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2014','Richard Flanagan','The Narrow Road to the Deep North','Historical novel','Australia','Richard_Flanagan','https://en.wikipedia.org/wiki/Richard_Flanagan']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2015','Marlon James','A Brief History of Seven Killings','Historical/experimental novel','Jamaica','Marlon_James_(novelist)','https://en.wikipedia.org/wiki/Marlon_James_(novelist)']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2015','Marlon James','A Brief History of Seven Killings','Historical/experimental novel','Jamaica','Marlon_James_(novelist)','https://en.wikipedia.org/wiki/Marlon_James_(novelist)']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2016','Paul Beatty','The Sellout','Satirical novel','United States of America','Paul_Beatty','https://en.wikipedia.org/wiki/Paul_Beatty']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2016','Paul Beatty','The Sellout','Satirical novel','United States of America','Paul_Beatty','https://en.wikipedia.org/wiki/Paul_Beatty']);
 		  
-		 db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?)", ['2017','George Saunders','Lincoln in the Bardo','Historical/experimental novel','United States of America','George_Saunders','https://en.wikipedia.org/wiki/George_Saunders']);
+		 db.run("INSERT INTO tableAuthors (Year,Author,Title,Genres,Country,AuthorWiki,AuthorFullWiki) VALUES (?,?,?,?,?,?,?)", ['2017','George Saunders','Lincoln in the Bardo','Historical/experimental novel','United States of America','George_Saunders','https://en.wikipedia.org/wiki/George_Saunders']);
 		 
   }
   private RunBooks(db:any){

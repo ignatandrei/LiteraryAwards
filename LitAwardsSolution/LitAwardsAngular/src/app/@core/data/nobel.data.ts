@@ -12,14 +12,14 @@ export class NobelData {
   }
   private CreateTables(db: any) {
     db.run(
-      "CREATE TABLE tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name);"
+      "CREATE TABLE tableAuthors  (id INTEGER PRIMARY KEY AUTOINCREMENT ,Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name);"
     );
     db.run("CREATE TABLE booksName (bookName,name);");
   }
     private RunLaureates(db: any) {
     
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1901",
       "Sully Prudhomme",
       "French",
@@ -30,7 +30,7 @@ export class NobelData {
       "Sully_Prudhomme"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1902",
       "Theodor Mommsen",
       "German",
@@ -41,7 +41,7 @@ export class NobelData {
       "Theodor_Mommsen"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1903",
       "Bjørnstjerne Bjørnson",
       "Norwegian",
@@ -52,7 +52,7 @@ export class NobelData {
       "Bj%C3%B8rnstjerne_Bj%C3%B8rnson"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1904",
       "Frédéric Mistral",
       "Provençal",
@@ -63,7 +63,7 @@ export class NobelData {
       "Fr%C3%A9d%C3%A9ric_Mistral"
     ]);
 
-    // db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    // db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
     //   "",
     //   "&#160;Spain",
     //   '"in recognition of the numerous and brilliant compositions which, in an individual and original manner, have revived the great traditions of the Spanish drama"&#91;15&#93;',
@@ -74,7 +74,7 @@ export class NobelData {
     //   "Spanish_language"
     // ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1905",
       "Henryk Sienkiewicz",
       "Polish",
@@ -85,7 +85,7 @@ export class NobelData {
       "Henryk_Sienkiewicz"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1906",
       "Giosuè Carducci",
       "Italian",
@@ -96,7 +96,7 @@ export class NobelData {
       "Giosu%C3%A8_Carducci"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1907",
       "Rudyard Kipling",
       "English",
@@ -107,7 +107,7 @@ export class NobelData {
       "Rudyard_Kipling"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1908",
       "Rudolf Christoph Eucken",
       "German",
@@ -118,7 +118,7 @@ export class NobelData {
       "Rudolf_Christoph_Eucken"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1909",
       "Selma Lagerlöf",
       "Swedish",
@@ -129,7 +129,7 @@ export class NobelData {
       "Selma_Lagerl%C3%B6f"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1910",
       "Paul von Heyse",
       "German",
@@ -140,7 +140,7 @@ export class NobelData {
       "Paul_Heyse"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1911",
       "Maurice Maeterlinck",
       "French",
@@ -151,7 +151,7 @@ export class NobelData {
       "Maurice_Maeterlinck"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1912",
       "Gerhart Hauptmann",
       "German",
@@ -162,7 +162,7 @@ export class NobelData {
       "Gerhart_Hauptmann"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1913",
       "Rabindranath Tagore",
       "Bengali",
@@ -173,7 +173,7 @@ export class NobelData {
       "Rabindranath_Tagore"
     ]);
 
-    // db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    // db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
     //   "1914",
     //   "1914",
     //   "",
@@ -184,7 +184,7 @@ export class NobelData {
     //   "en.wikipedia.org"
     // ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1915",
       "Romain Rolland",
       "French",
@@ -195,7 +195,7 @@ export class NobelData {
       "Romain_Rolland"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1916",
       "Verner von Heidenstam",
       "Swedish",
@@ -206,7 +206,7 @@ export class NobelData {
       "Verner_von_Heidenstam"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1917",
       "Karl Adolph Gjellerup",
       "Danish",
@@ -217,7 +217,7 @@ export class NobelData {
       "Karl_Adolph_Gjellerup"
     ]);
 
-    // db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    // db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
     //   "",
     //   "&#160;Denmark",
     //   '"for his authentic descriptions of present-day life in Denmark"&#91;27&#93;',
@@ -228,7 +228,7 @@ export class NobelData {
     //   "Danish_language"
     // ]);
 
-    // db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    // db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
     //   "1918",
     //   "1918",
     //   "",
@@ -239,7 +239,7 @@ export class NobelData {
     //   "en.wikipedia.org"
     // ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1919",
       "Carl Spitteler",
       "German",
@@ -250,7 +250,7 @@ export class NobelData {
       "Carl_Spitteler"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1920",
       "Knut Hamsun",
       "Norwegian",
@@ -261,7 +261,7 @@ export class NobelData {
       "Knut_Hamsun"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1921",
       "Anatole France",
       "French",
@@ -272,7 +272,7 @@ export class NobelData {
       "Anatole_France"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1922",
       "Jacinto Benavente",
       "Spanish",
@@ -283,7 +283,7 @@ export class NobelData {
       "Jacinto_Benavente"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1923",
       "William Butler Yeats",
       "English",
@@ -294,7 +294,7 @@ export class NobelData {
       "W._B._Yeats"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1924",
       "Władysław Reymont",
       "Polish",
@@ -305,7 +305,7 @@ export class NobelData {
       "W%C5%82adys%C5%82aw_Reymont"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1925",
       "George Bernard Shaw",
       "English",
@@ -316,7 +316,7 @@ export class NobelData {
       "George_Bernard_Shaw"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1926",
       "Grazia Deledda",
       "Italian",
@@ -327,7 +327,7 @@ export class NobelData {
       "Grazia_Deledda"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1927",
       "Henri Bergson",
       "French",
@@ -338,7 +338,7 @@ export class NobelData {
       "Henri_Bergson"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1928",
       "Sigrid Undset",
       "Norwegian",
@@ -349,7 +349,7 @@ export class NobelData {
       "Sigrid_Undset"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1929",
       "Thomas Mann",
       "German",
@@ -360,7 +360,7 @@ export class NobelData {
       "Thomas_Mann"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1930",
       "Sinclair Lewis",
       "English",
@@ -371,7 +371,7 @@ export class NobelData {
       "Sinclair_Lewis"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1931",
       "Erik Axel Karlfeldt",
       "Swedish",
@@ -382,7 +382,7 @@ export class NobelData {
       "Erik_Axel_Karlfeldt"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1932",
       "John Galsworthy",
       "English",
@@ -393,7 +393,7 @@ export class NobelData {
       "John_Galsworthy"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1933",
       "Ivan Bunin",
       "Russian",
@@ -404,7 +404,7 @@ export class NobelData {
       "Ivan_Bunin"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1934",
       "Luigi Pirandello",
       "Italian",
@@ -415,7 +415,7 @@ export class NobelData {
       "Luigi_Pirandello"
     ]);
 
-    // db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    // db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
     //   "1935",
     //   "1935",
     //   "",
@@ -426,7 +426,7 @@ export class NobelData {
     //   "en.wikipedia.org"
     // ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1936",
       "Eugene O'Neill",
       "English",
@@ -437,7 +437,7 @@ export class NobelData {
       "Eugene_O%27Neill"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1937",
       "Roger Martin du Gard",
       "French",
@@ -448,7 +448,7 @@ export class NobelData {
       "Roger_Martin_du_Gard"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1938",
       "Pearl S. Buck",
       "English",
@@ -459,7 +459,7 @@ export class NobelData {
       "Pearl_S._Buck"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1939",
       "Frans Eemil Sillanpää",
       "Finnish",
@@ -471,7 +471,7 @@ export class NobelData {
     ]);
 
     
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1944",
       "Johannes Vilhelm Jensen",
       "Danish",
@@ -482,7 +482,7 @@ export class NobelData {
       "Johannes_Vilhelm_Jensen"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1945",
       "Gabriela Mistral",
       "Spanish",
@@ -493,7 +493,7 @@ export class NobelData {
       "Gabriela_Mistral"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1946",
       "Hermann Hesse",
       "German",
@@ -504,7 +504,7 @@ export class NobelData {
       "Hermann_Hesse"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1947",
       "André Gide",
       "French",
@@ -515,7 +515,7 @@ export class NobelData {
       "Andr%C3%A9_Gide"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1948",
       "T. S. Eliot",
       "English",
@@ -526,7 +526,7 @@ export class NobelData {
       "T._S._Eliot"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1949",
       "William Faulkner",
       "English",
@@ -537,7 +537,7 @@ export class NobelData {
       "William_Faulkner"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1950",
       "Bertrand Russell",
       "English",
@@ -548,7 +548,7 @@ export class NobelData {
       "Bertrand_Russell"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1951",
       "Pär Lagerkvist",
       "Swedish",
@@ -559,7 +559,7 @@ export class NobelData {
       "P%C3%A4r_Lagerkvist"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1952",
       "François Mauriac",
       "French",
@@ -570,7 +570,7 @@ export class NobelData {
       "Fran%C3%A7ois_Mauriac"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1953",
       "Winston Churchill",
       "English",
@@ -581,7 +581,7 @@ export class NobelData {
       "Winston_Churchill"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1954",
       "Ernest Hemingway",
       "English",
@@ -592,7 +592,7 @@ export class NobelData {
       "Ernest_Hemingway"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1955",
       "Halldór Laxness",
       "Icelandic",
@@ -603,7 +603,7 @@ export class NobelData {
       "Halld%C3%B3r_Laxness"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1956",
       "Juan Ramón Jiménez",
       "Spanish",
@@ -614,7 +614,7 @@ export class NobelData {
       "Juan_Ram%C3%B3n_Jim%C3%A9nez"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1957",
       "Albert Camus",
       "French",
@@ -625,7 +625,7 @@ export class NobelData {
       "Albert_Camus"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1958",
       "Boris Pasternak",
       "Russian",
@@ -636,7 +636,7 @@ export class NobelData {
       "Boris_Pasternak"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1959",
       "Salvatore Quasimodo",
       "Italian",
@@ -647,7 +647,7 @@ export class NobelData {
       "Salvatore_Quasimodo"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1960",
       "Saint-John Perse",
       "French",
@@ -658,7 +658,7 @@ export class NobelData {
       "Saint-John_Perse"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1961",
       "Ivo Andrić",
       "Serb",
@@ -669,7 +669,7 @@ export class NobelData {
       "Ivo_Andri%C4%87"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1962",
       "John Steinbeck",
       "English",
@@ -680,7 +680,7 @@ export class NobelData {
       "John_Steinbeck"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1963",
       "Giorgos Seferis",
       "Greek",
@@ -691,7 +691,7 @@ export class NobelData {
       "Giorgos_Seferis"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1964",
       "Jean-Paul Sartre",
       "French",
@@ -702,7 +702,7 @@ export class NobelData {
       "Jean-Paul_Sartre"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1965",
       "Mikhail Sholokhov",
       "Russian",
@@ -713,7 +713,7 @@ export class NobelData {
       "Mikhail_Sholokhov"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1966",
       "Shmuel Yosef Agnon",
       "Hebrew",
@@ -724,7 +724,7 @@ export class NobelData {
       "Shmuel_Yosef_Agnon"
     ]);
 
-    // db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    // db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
     //   "",
     //   "&#160;Sweden(Born in Germany)",
     //   '"for her outstanding lyrical and dramatic writing, which interprets Israel\'s destiny with touching strength"&#91;71&#93;',
@@ -735,7 +735,7 @@ export class NobelData {
     //   "German_language"
     // ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1967",
       "Miguel Ángel Asturias",
       "Spanish",
@@ -746,7 +746,7 @@ export class NobelData {
       "Miguel_%C3%81ngel_Asturias"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1968",
       "Yasunari Kawabata",
       "Japanese",
@@ -757,7 +757,7 @@ export class NobelData {
       "Yasunari_Kawabata"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1969",
       "Samuel Beckett",
       "English and French",
@@ -768,7 +768,7 @@ export class NobelData {
       "Samuel_Beckett"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1970",
       "Aleksandr Solzhenitsyn",
       "Russian",
@@ -779,7 +779,7 @@ export class NobelData {
       "Aleksandr_Solzhenitsyn"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1971",
       "Pablo Neruda",
       "Spanish",
@@ -790,7 +790,7 @@ export class NobelData {
       "Pablo_Neruda"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1972",
       "Heinrich Böll",
       "German",
@@ -801,7 +801,7 @@ export class NobelData {
       "Heinrich_B%C3%B6ll"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1973",
       "Patrick White",
       "English",
@@ -812,7 +812,7 @@ export class NobelData {
       "Patrick_White"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1974",
       "Eyvind Johnson",
       "Swedish",
@@ -823,7 +823,7 @@ export class NobelData {
       "Eyvind_Johnson"
     ]);
 
-    // db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    // db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
     //   "",
     //   "&#160;Sweden",
     //   '"for writings that catch the dewdrop and reflect the cosmos"&#91;79&#93;',
@@ -834,7 +834,7 @@ export class NobelData {
     //   "Swedish_language"
     // ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1975",
       "Eugenio Montale",
       "Italian",
@@ -845,7 +845,7 @@ export class NobelData {
       "Eugenio_Montale"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1976",
       "Saul Bellow",
       "English",
@@ -856,7 +856,7 @@ export class NobelData {
       "Saul_Bellow"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1977",
       "Vicente Aleixandre",
       "Spanish",
@@ -867,7 +867,7 @@ export class NobelData {
       "Vicente_Aleixandre"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1978",
       "Isaac Bashevis Singer",
       "Yiddish",
@@ -878,7 +878,7 @@ export class NobelData {
       "Isaac_Bashevis_Singer"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1979",
       "Odysseas Elytis",
       "Greek",
@@ -889,7 +889,7 @@ export class NobelData {
       "Odysseas_Elytis"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1980",
       "Czesław Miłosz",
       "Polish",
@@ -900,7 +900,7 @@ export class NobelData {
       "Czes%C5%82aw_Mi%C5%82osz"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1981",
       "Elias Canetti",
       "German",
@@ -911,7 +911,7 @@ export class NobelData {
       "Elias_Canetti"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1982",
       "Gabriel García Márquez",
       "Spanish",
@@ -922,7 +922,7 @@ export class NobelData {
       "Gabriel_Garc%C3%ADa_M%C3%A1rquez"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1983",
       "William Golding",
       "English",
@@ -933,7 +933,7 @@ export class NobelData {
       "William_Golding"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1984",
       "Jaroslav Seifert",
       "Czech",
@@ -944,7 +944,7 @@ export class NobelData {
       "Jaroslav_Seifert"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1985",
       "Claude Simon",
       "French",
@@ -955,7 +955,7 @@ export class NobelData {
       "Claude_Simon"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1986",
       "Wole Soyinka",
       "English",
@@ -966,7 +966,7 @@ export class NobelData {
       "Wole_Soyinka"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1987",
       "Joseph Brodsky",
       "Russian and English",
@@ -977,7 +977,7 @@ export class NobelData {
       "Joseph_Brodsky"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1988",
       "Naguib Mahfouz",
       "Arabic",
@@ -988,7 +988,7 @@ export class NobelData {
       "Naguib_Mahfouz"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1989",
       "Camilo José Cela",
       "Spanish",
@@ -999,7 +999,7 @@ export class NobelData {
       "Camilo_Jos%C3%A9_Cela"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1990",
       "Octavio Paz",
       "Spanish",
@@ -1010,7 +1010,7 @@ export class NobelData {
       "Octavio_Paz"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1991",
       "Nadine Gordimer",
       "English",
@@ -1021,7 +1021,7 @@ export class NobelData {
       "Nadine_Gordimer"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1992",
       "Derek Walcott",
       "English",
@@ -1032,7 +1032,7 @@ export class NobelData {
       "Derek_Walcott"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1993",
       "Toni Morrison",
       "English",
@@ -1043,7 +1043,7 @@ export class NobelData {
       "Toni_Morrison"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1994",
       "Kenzaburō Ōe",
       "Japanese",
@@ -1054,7 +1054,7 @@ export class NobelData {
       "Kenzabur%C5%8D_%C5%8Ce"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1995",
       "Seamus Heaney",
       "English",
@@ -1065,7 +1065,7 @@ export class NobelData {
       "Seamus_Heaney"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1996",
       "Wisława Szymborska",
       "Polish",
@@ -1076,7 +1076,7 @@ export class NobelData {
       "Wis%C5%82awa_Szymborska"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1997",
       "Dario Fo",
       "Italian",
@@ -1087,7 +1087,7 @@ export class NobelData {
       "Dario_Fo"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1998",
       "José Saramago",
       "Portuguese",
@@ -1098,7 +1098,7 @@ export class NobelData {
       "Jos%C3%A9_Saramago"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "1999",
       "Günter Grass",
       "German",
@@ -1109,7 +1109,7 @@ export class NobelData {
       "G%C3%BCnter_Grass"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2000",
       "Gao Xingjian",
       "Chinese",
@@ -1120,7 +1120,7 @@ export class NobelData {
       "Gao_Xingjian"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2001",
       "V. S. Naipaul",
       "English",
@@ -1131,7 +1131,7 @@ export class NobelData {
       "V._S._Naipaul"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2002",
       "Imre Kertész",
       "Hungarian",
@@ -1142,7 +1142,7 @@ export class NobelData {
       "Imre_Kert%C3%A9sz"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2003",
       "J. M. Coetzee",
       "English",
@@ -1153,7 +1153,7 @@ export class NobelData {
       "J._M._Coetzee"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2004",
       "Elfriede Jelinek",
       "German",
@@ -1164,7 +1164,7 @@ export class NobelData {
       "Elfriede_Jelinek"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2005",
       "Harold Pinter",
       "English",
@@ -1175,7 +1175,7 @@ export class NobelData {
       "Harold_Pinter"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2006",
       "Orhan Pamuk",
       "Turkish",
@@ -1186,7 +1186,7 @@ export class NobelData {
       "Orhan_Pamuk"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2007",
       "Doris Lessing",
       "English",
@@ -1197,7 +1197,7 @@ export class NobelData {
       "Doris_Lessing"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2008",
       "J. M. G. Le Clézio",
       "French",
@@ -1208,7 +1208,7 @@ export class NobelData {
       "J._M._G._Le_Cl%C3%A9zio"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2009",
       "Herta Müller",
       "German",
@@ -1219,7 +1219,7 @@ export class NobelData {
       "Herta_M%C3%BCller"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2010",
       "Mario Vargas Llosa",
       "Spanish",
@@ -1230,7 +1230,7 @@ export class NobelData {
       "Mario_Vargas_Llosa"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2011",
       "Tomas Tranströmer",
       "Swedish",
@@ -1241,7 +1241,7 @@ export class NobelData {
       "Tomas_Transtr%C3%B6mer"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2012",
       "Mo Yan",
       "Chinese",
@@ -1252,7 +1252,7 @@ export class NobelData {
       "Mo_Yan"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2013",
       "Alice Munro",
       "English",
@@ -1263,7 +1263,7 @@ export class NobelData {
       "Alice_Munro"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2014",
       "Patrick Modiano",
       "French",
@@ -1274,7 +1274,7 @@ export class NobelData {
       "Patrick_Modiano"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2015",
       "Svetlana Alexievich",
       "Russian",
@@ -1285,7 +1285,7 @@ export class NobelData {
       "Svetlana_Alexievich"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2016",
       "Bob Dylan",
       "English",
@@ -1296,7 +1296,7 @@ export class NobelData {
       "Bob_Dylan"
     ]);
 
-    db.run("INSERT INTO tableAuthors VALUES (?,?,?,?,?,?,?,?)", [
+    db.run("INSERT INTO tableAuthors (Year,Laureate,Languages,Citation,Genres,PictureUrl,LaureateFullWiki,name) VALUES (?,?,?,?,?,?,?,?)", [
       "2017",
       "Kazuo Ishiguro",
       "English",
