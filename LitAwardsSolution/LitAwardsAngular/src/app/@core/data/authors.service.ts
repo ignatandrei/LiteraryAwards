@@ -15,6 +15,7 @@ export class AuthorsService {
     
   }
     dbAuthors: any;
+    dbReadingList:any;
     public version: string = environment.VERSION;
     async CreateOrGetDb() {
         var self = this;
@@ -25,6 +26,22 @@ export class AuthorsService {
             // Initial creation of database if not found
     
             self.createDatabase(sender).then(()=>{
+                sender.save();
+                
+            });
+          },
+          function(e) {
+            // Initialization of existing database failed
+            alert("database failed" + e);
+            
+          }
+        );
+        this.dbReadingList = new SQL.PersistentDatabase(
+          "read_authors_v"+environment.VERSION,
+          async function(sender) {
+            // Initial creation of database if not found
+    
+            self.createReadingList(sender).then(()=>{
                 sender.save();
                 
             });
@@ -49,6 +66,43 @@ export class AuthorsService {
         }        
         stmt.free();
       }
+      private  ReadList(idAuthor: number):void{
+        this.dbReadingList.run("INSERT INTO tableReadingList(idAuthor) VALUES (?)", [idAuthor]);        
+      }
+
+
+      private  async createReadingList(db){
+        db.run("CREATE TABLE tableReadingList (idAuthor);");
+
+        
+      }
+      private  HowMuchRead(){
+        var ids=new Array<number>();
+        let sql="SELECT idAuthor FROM tableReadingList ";
+        
+        let stmt = this.dbReadingList.prepare(sql); 
+        while (stmt.step()) {
+          //
+          var row = stmt.getAsObject();
+          ids.push(row.idAuthor)
+          
+        }        
+        stmt.free();
+
+        sql='select sum(coalesce(NobelId,0)), sum(coalesce(BookerId,0)) as BookerId, sum(coalesce(BGId,0)) as BGId from tableAuthors  '
+
+        stmt = this.dbAuthors.prepare(sql); 
+        while (stmt.step()) {
+          //
+          var row = stmt.getAsObject();
+          stmt.free();
+          return row;
+          
+        }        
+        
+
+        
+      }
       private async createDatabase(db) {
         
         db.run("CREATE TABLE tableAuthors (id INTEGER PRIMARY KEY AUTOINCREMENT,Author, NobelId, BookerId, BGId );");
@@ -61,17 +115,17 @@ export class AuthorsService {
       // });
         //window.alert('before' + JSON.stringify(dataSearched));
         dataSearched.forEach(a=>{
-        db.run("INSERT INTO tableAuthors(Author, BookerId) VALUES (?,?)", [a.Author,1]);
+        db.run("INSERT INTO tableAuthors(Author, BookerId) VALUES (?,?)", [a.Author,-1]);
         });
         
         dataSearched=  this.nobel.search(null);
         dataSearched.forEach(a=>{
-          db.run("INSERT INTO tableAuthors(Author, NobelId) VALUES (?,?)", [a.Author,1]);
+          db.run("INSERT INTO tableAuthors(Author, NobelId) VALUES (?,?)", [a.Author,-1]);
           });
           
         dataSearched=  this.bg.search(null);
         dataSearched.forEach(a=>{
-          db.run("INSERT INTO tableAuthors(Author, BGId) VALUES (?,?)", [a.Author,1]);
+          db.run("INSERT INTO tableAuthors(Author, BGId) VALUES (?,?)", [a.Author,-1]);
           });
         
         this.test(db);

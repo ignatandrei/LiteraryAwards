@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BGService } from '../../../@core/data/bg.service';
+import { AuthorsService } from '../../../@core/data/authors.service';
 
 @Component({
   selector: 'billgates',
@@ -9,12 +10,17 @@ import { BGService } from '../../../@core/data/bg.service';
 export class BillgatesComponent implements OnInit {
 
   source:any[];
-  constructor(public bg:BGService) { 
+  constructor(public bg:BGService, authors: AuthorsService) { 
    
   }
 
   ngOnInit() {
     this.source=this.bg.getData();
+    
+  }
+
+  changeRead(val){
+    window.alert(JSON.stringify(val);
   }
 
 }

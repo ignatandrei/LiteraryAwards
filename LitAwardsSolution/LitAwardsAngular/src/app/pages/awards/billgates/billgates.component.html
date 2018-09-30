@@ -15,7 +15,10 @@
 
   <nb-card>
     <nb-card-header>
-      Author: {{author.Author}}
+      Author: {{author.Author}} 
+      <button nbButton (click)="changeRead(author.id)" size="xsmall">Read it</button>
+      
+      
     </nb-card-header>
     <nb-card-body>
       Book : {{author.bookName}}
