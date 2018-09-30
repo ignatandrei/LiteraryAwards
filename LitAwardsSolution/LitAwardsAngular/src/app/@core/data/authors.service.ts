@@ -14,8 +14,8 @@ export class AuthorsService {
     
     
   }
-    dbAuthors: any;
-    dbReadingList:any;
+    private dbAuthors: any;
+    private dbReadingList:any;
     public version: string = environment.VERSION;
     async CreateOrGetDb() {
         var self = this;
@@ -66,12 +66,20 @@ export class AuthorsService {
         }        
         stmt.free();
       }
-      private  ReadList(idAuthor: number):void{
+      public  UpdateReadList(idAuthor: number,read:boolean ):void{
+        if(read){
         this.dbReadingList.run("INSERT INTO tableReadingList(idAuthor) VALUES (?)", [idAuthor]);        
+        }
+        else{
+          this.dbReadingList.run("delete from tableReadingList where idAuthor = " + [idAuthor]);        
+          
+        }
+        this.dbReadingList.save();
       }
 
 
       private  async createReadingList(db){
+        
         db.run("CREATE TABLE tableReadingList (idAuthor);");
 
         
@@ -135,6 +143,20 @@ export class AuthorsService {
         
         this.test(db);
         
+
+      }
+      public  FindAuthor(name:string):number{
+        let id:number;
+        let sql="SELECT * FROM tableAuthors where Author='"+ name +"'";
+        
+        var stmt = this.dbAuthors.prepare(sql); 
+        while (stmt.step()) {
+          //
+          var row = stmt.getAsObject();
+          id=row.id;          
+        }        
+        stmt.free();
+        return id;
 
       }
     

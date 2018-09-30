@@ -16,7 +16,10 @@
   <nb-card>
     <nb-card-header>
       Author: {{author.Author}} 
-      <button nbButton (click)="changeRead(author)" size="xsmall">Read it</button>
+      
+      Actual status {{author.read? "read":"not read"}}
+      
+      <button nbButton (click)="changeRead(author)" size="xsmall">Change reading status </button>
       
       
     </nb-card-header>
