@@ -76,7 +76,7 @@ export class AuthorsService {
 
         
       }
-      private  HowMuchRead(){
+      public AllRead():Array<number>{
         var ids=new Array<number>();
         let sql="SELECT idAuthor FROM tableReadingList ";
         
@@ -88,10 +88,15 @@ export class AuthorsService {
           
         }        
         stmt.free();
+        return ids;
 
-        sql='select sum(coalesce(NobelId,0)), sum(coalesce(BookerId,0)) as BookerId, sum(coalesce(BGId,0)) as BGId from tableAuthors  '
-
-        stmt = this.dbAuthors.prepare(sql); 
+      }
+      private  HowMuchRead(){
+        
+        let ids=this.AllRead();
+        let sql='select sum(coalesce(NobelId,0)), sum(coalesce(BookerId,0)) as BookerId, sum(coalesce(BGId,0)) as BGId from tableAuthors  ';
+        //TODO: where id in ids
+        let stmt = this.dbAuthors.prepare(sql); 
         while (stmt.step()) {
           //
           var row = stmt.getAsObject();

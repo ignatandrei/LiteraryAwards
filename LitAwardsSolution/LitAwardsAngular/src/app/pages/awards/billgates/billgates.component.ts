@@ -10,15 +10,17 @@ import { AuthorsService } from '../../../@core/data/authors.service';
 export class BillgatesComponent implements OnInit {
 
   source:any[];
-  constructor(public bg:BGService, authors: AuthorsService) { 
+  constructor(private bg:BGService,private authors: AuthorsService) { 
    
   }
 
   ngOnInit() {
-    this.source=this.bg.getData();
+    var data= this.bg.getData();
+    var ids=this.authors.AllRead();
+    this.source=data.map(function(a) { a['read']= true; return a; } );
     
   }
-
+ 
   changeRead(val){
     window.alert(JSON.stringify(val);
   }
