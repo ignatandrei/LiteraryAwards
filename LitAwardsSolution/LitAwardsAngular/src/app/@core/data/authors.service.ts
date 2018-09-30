@@ -53,20 +53,29 @@ export class AuthorsService {
         
         db.run("CREATE TABLE tableAuthors (id INTEGER PRIMARY KEY AUTOINCREMENT,Author, NobelId, BookerId, BGId );");
         var dataSearched=  this.booker.search(null);
-        dataSearched = dataSearched.map(function(val) {
-          return {
-              Author: val.Author,
-              NobelId: 1              
-          };
-      });
+      //   dataSearched = dataSearched.map(function(val) {
+      //     return {
+      //         Author: val.Author,
+      //         NobelId: 1              
+      //     };
+      // });
         //window.alert('before' + JSON.stringify(dataSearched));
-        db.run("INSERT INTO tableAuthors(Author, NobelId) VALUES (?,?)", [['a',1],['b',1]]);
-        this.test(db);
-        //dataSearched.push(...this.nobel.search(null));
-
-        //dataSearched.push(...this.bg.search(null));
+        dataSearched.forEach(a=>{
+        db.run("INSERT INTO tableAuthors(Author, BookerId) VALUES (?,?)", [a.Author,1]);
+        });
         
-
+        dataSearched=  this.nobel.search(null);
+        dataSearched.forEach(a=>{
+          db.run("INSERT INTO tableAuthors(Author, NobelId) VALUES (?,?)", [a.Author,1]);
+          });
+          
+        dataSearched=  this.bg.search(null);
+        dataSearched.forEach(a=>{
+          db.run("INSERT INTO tableAuthors(Author, BGId) VALUES (?,?)", [a.Author,1]);
+          });
+        
+        this.test(db);
+        
 
       }
     
