@@ -22,7 +22,7 @@ export class BGService {
     }
     getData(): any[] {
         var data = [];    
-        var stmt = this.dbBG.prepare("SELECT * FROM tableAuthors order by Author");
+        var stmt = this.dbBG.prepare("SELECT Author, group_concat(bookName) as bookName FROM tableAuthors GROUP BY Author order by Author");
         while (stmt.step()) {
           //
           var row = stmt.getAsObject();
@@ -37,7 +37,7 @@ export class BGService {
 
       search(s:string):any[]{
         var data = [];
-        let sql="SELECT Author  , 'Bill Gates' as Collection FROM tableAuthors ";
+        let sql="SELECT distinct Author  , 'Bill Gates' as Collection FROM tableAuthors ";
         if(s != null && s.length>0 ){
            //sql injection for in memory database?
             sql +="where Author like '%" + s + "%'";

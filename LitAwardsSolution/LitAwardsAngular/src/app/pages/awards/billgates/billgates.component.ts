@@ -17,6 +17,7 @@ export class BillgatesComponent implements OnInit {
     var ids = this.authors.AllRead();
 
     this.source = data.map(function(a) {
+      
       var uniqueIdAuthor = self.authors.FindAuthor(a.Author);
       const read=ids.filter(it => it == uniqueIdAuthor).length === 1;
       if(read)
