@@ -10,7 +10,7 @@ import { AuthorsService } from "../../../@core/data/authors.service";
 export class BillgatesComponent implements OnInit {
   source: any[];
   constructor(private bg: BGService, private authors: AuthorsService) {}
-
+  numberAuthorsRead=0;
   ngOnInit() {
     var self = this;
     var data = this.bg.getData();
@@ -18,7 +18,11 @@ export class BillgatesComponent implements OnInit {
 
     this.source = data.map(function(a) {
       var uniqueIdAuthor = self.authors.FindAuthor(a.Author);
-      a["read"] = ids.filter(it => it == uniqueIdAuthor).length === 1;
+      const read=ids.filter(it => it == uniqueIdAuthor).length === 1;
+      if(read)
+        self.numberAuthorsRead++;
+        
+      a["read"] = read;
       a["authorId"] = uniqueIdAuthor;
       return a;
     });
@@ -26,6 +30,10 @@ export class BillgatesComponent implements OnInit {
 
   changeRead(val) {
     val.read = !val.read;
+    if(val.read)
+      this.numberAuthorsRead++;
+    else
+      this.numberAuthorsRead--;
     this.authors.UpdateReadList(val["authorId"], val.read);
   }
 }

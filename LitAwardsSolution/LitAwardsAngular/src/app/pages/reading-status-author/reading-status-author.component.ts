@@ -14,7 +14,9 @@ export class ReadingStatusAuthorComponent implements OnInit {
   ngOnInit() {
   }
   changeReadData(author:AuthorStatus){
+    console.log("change read data");
     this.onChangeRead.emit(author);
+    console.log("after change read data");
   }
 
 }

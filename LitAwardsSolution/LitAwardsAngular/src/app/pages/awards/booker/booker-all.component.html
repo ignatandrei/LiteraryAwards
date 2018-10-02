@@ -1,6 +1,7 @@
 <nb-card>
   <nb-card-header>
-    Booker prizes 
+    Booker prizes! {{numberAuthorsRead}}
+    <nb-badge text= " {{numberAuthorsRead}} / {{source?.length}} " status="danger" position="top left"></nb-badge>
   </nb-card-header>
 
 
@@ -14,9 +15,7 @@
 
   <nb-card>
     <nb-card-header>
-      {{author.Author}} Actual status {{author.read? "read":"not read"}}
-      
-      <button nbButton (click)="changeRead(author)" size="xsmall">Change reading status </button>
+      {{author.Author}} <reading-status-author [author]="author" (onChangeRead)="changeRead($event)"  ></reading-status-author>
     </nb-card-header>
     
         

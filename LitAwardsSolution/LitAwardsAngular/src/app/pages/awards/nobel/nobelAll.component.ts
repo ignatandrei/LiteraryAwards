@@ -3,7 +3,7 @@ import { NobelService } from "../../../@core/data/nobel.service";
 import { AuthorsService } from "../../../@core/data/authors.service";
 
 @Component({
-  selector: "ngx-smart-table",
+  selector: "nobel-all",
   templateUrl: "./nobelAll.component.html",
   styles: [
     `
@@ -55,6 +55,7 @@ export class NobelTableComponent implements OnInit {
     this.allBooks[name] = books;
   }
   changeRead(val) {
+    console.log("change read nobel");
     val.read = !val.read;
     if(val.read)
       this.numberAuthorsRead++;

@@ -16,7 +16,7 @@
   <nb-card>
     <nb-card-header>
       {{nobel.Laureate}} <img src='{{nobel.PictureUrl}}' /> 
-      <reading-status-author [author]="nobel" (changeRead)="onChangeRead($event)"  ></reading-status-author>
+      <reading-status-author [author]="nobel" (onChangeRead)="changeRead($event)"  ></reading-status-author>
     </nb-card-header>
     
         

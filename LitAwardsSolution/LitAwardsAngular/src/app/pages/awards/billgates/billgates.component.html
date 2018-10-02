@@ -4,6 +4,7 @@
 <nb-card>
   <nb-card-header>
     Books taken from <a href='https://www.gatesnotes.com/Books#All'>Bill Gates</a> reviews
+    <nb-badge text= " {{numberAuthorsRead}} / {{source?.length}} " status="danger" position="top left"></nb-badge>
   </nb-card-header>
 
 
@@ -17,9 +18,7 @@
     <nb-card-header>
       Author: {{author.Author}} 
       
-      Actual status {{author.read? "read":"not read"}}
-      
-      <button nbButton (click)="changeRead(author)" size="xsmall">Change reading status </button>
+      <reading-status-author [author]="author" (onChangeRead)="changeRead($event)"  ></reading-status-author>
       
       
     </nb-card-header>
