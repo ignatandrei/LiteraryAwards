@@ -6,7 +6,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NbListModule } from '@nebular/theme/';
+import { NbListModule, NbBadgeModule } from '@nebular/theme/';
 
 
 const PAGES_COMPONENTS = [
@@ -21,6 +21,7 @@ const PAGES_COMPONENTS = [
     MiscellaneousModule,
     NgbModule.forRoot(),
     NbListModule,    
+    NbBadgeModule
   ],
   declarations: [
     ...PAGES_COMPONENTS,

@@ -1,6 +1,7 @@
 <nb-card>
   <nb-card-header>
     Nobel prizes for literature
+    <nb-badge text= " {{numberAuthorsRead}} / {{source?.length}} " status="danger" position="top left"></nb-badge>
   </nb-card-header>
 
 
@@ -14,7 +15,9 @@
 
   <nb-card>
     <nb-card-header>
-      {{nobel.Laureate}} <img src='{{nobel.PictureUrl}}' />
+      {{nobel.Laureate}} <img src='{{nobel.PictureUrl}}' /> 
+      <nb-badge text= " {{nobel.read? 'read':'not read'}} " status="{{nobel.read? 'success':'info'}}" position="top left"></nb-badge>      
+      <button nbButton (click)="changeRead(nobel)" size="xsmall">Change reading status </button>
     </nb-card-header>
     
         

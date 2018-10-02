@@ -5,7 +5,7 @@ import { ThemeModule } from '../../@theme/theme.module';
 import { TablesRoutingModule, routedComponents } from './awards-routing.module';
 import { NobelService } from '../../@core/data/nobel.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NbAccordionModule, NbListModule } from '@nebular/theme';
+import { NbAccordionModule, NbListModule, NbBadgeModule } from '@nebular/theme';
 import { BookerService } from '../../@core/data/booker.service';
 
 @NgModule({
@@ -15,7 +15,8 @@ import { BookerService } from '../../@core/data/booker.service';
     Ng2SmartTableModule,
     NgbModule.forRoot(),
     NbAccordionModule,
-    NbListModule
+    NbListModule,
+    NbBadgeModule
   ],
   declarations: [
     ...routedComponents,

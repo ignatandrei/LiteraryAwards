@@ -53,11 +53,11 @@ export class AuthorsService {
           }
         );
       }
-      test(db){
+      public  test(){
         
         let sql="SELECT * FROM tableAuthors ";
         
-        var stmt = db.prepare(sql); 
+        var stmt = this.dbAuthors.prepare(sql); 
         while (stmt.step()) {
           //
           var row = stmt.getAsObject();
@@ -141,13 +141,13 @@ export class AuthorsService {
           db.run("INSERT INTO tableAuthors(Author, BGId) VALUES (?,?)", [a.Author,-1]);
           });
         
-        this.test(db);
+        
         
 
       }
       public  FindAuthor(name:string):number{
         let id:number;
-        let sql="SELECT * FROM tableAuthors where Author='"+ name +"'";
+        let sql="SELECT * FROM tableAuthors where Author='"+ name.replace("'","''") +"'";
         
         var stmt = this.dbAuthors.prepare(sql); 
         while (stmt.step()) {

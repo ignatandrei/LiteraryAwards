@@ -21,10 +21,10 @@ export class NobelService {
   
   search(s:string):any[]{
     var data = [];
-    let sql="SELECT Laureate as Author, name as Name , 'Nobel' as Collection FROM tableAuthors ";
+    let sql="SELECT Laureate as Author, name as Name , 'Nobel' as Collection FROM tableAuthors";
     if(s != null && s.length>0 ){
        //sql injection for in memory database?
-        sql +="where Laureate like '%" + s + "%'";
+        sql +=" where Laureate like '%" + s + "%'";
     }
     var stmt = this.dbPers.prepare(sql); 
     while (stmt.step()) {
