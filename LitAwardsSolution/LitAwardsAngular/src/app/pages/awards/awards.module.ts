@@ -7,6 +7,7 @@ import { NobelService } from '../../@core/data/nobel.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NbAccordionModule, NbListModule, NbBadgeModule } from '@nebular/theme';
 import { BookerService } from '../../@core/data/booker.service';
+import { ReadingStatusAuthorComponent } from '../reading-status-author/reading-status-author.component';
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { BookerService } from '../../@core/data/booker.service';
   ],
   declarations: [
     ...routedComponents,
+    ReadingStatusAuthorComponent
   ],
   providers: [
     NobelService,

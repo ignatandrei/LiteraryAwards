@@ -16,8 +16,7 @@
   <nb-card>
     <nb-card-header>
       {{nobel.Laureate}} <img src='{{nobel.PictureUrl}}' /> 
-      <nb-badge text= " {{nobel.read? 'read':'not read'}} " status="{{nobel.read? 'success':'info'}}" position="top left"></nb-badge>      
-      <button nbButton (click)="changeRead(nobel)" size="xsmall">Change reading status </button>
+      <reading-status-author [author]="nobel" (changeRead)="onChangeRead($event)"  ></reading-status-author>
     </nb-card-header>
     
         
