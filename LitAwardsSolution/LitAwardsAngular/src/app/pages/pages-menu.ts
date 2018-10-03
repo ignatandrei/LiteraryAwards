@@ -8,9 +8,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
+    title: 'All Authors',
+    icon: 'nb-coffee-maker',
+    link: '/pages/authors',
+    home: true,
+  },
+  {
     title: 'FEATURES',
     group: true,
   },
+  
   // {
   //   title: 'Auth',
   //   icon: 'nb-locked',
@@ -56,4 +63,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
     ],
   },
+  ,
+  
 ];

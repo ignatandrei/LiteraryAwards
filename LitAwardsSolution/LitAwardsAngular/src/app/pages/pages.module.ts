@@ -7,6 +7,8 @@ import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NbListModule, NbBadgeModule } from '@nebular/theme/';
+import { AwardsModule } from './awards/awards.module';
+import { AuthorsModule } from './authors/authors.module';
 
 
 const PAGES_COMPONENTS = [
@@ -18,6 +20,8 @@ const PAGES_COMPONENTS = [
     PagesRoutingModule,
     ThemeModule,
     DashboardModule,
+    AwardsModule,
+    AuthorsModule,
     MiscellaneousModule,
     NgbModule.forRoot(),
     NbListModule,    
