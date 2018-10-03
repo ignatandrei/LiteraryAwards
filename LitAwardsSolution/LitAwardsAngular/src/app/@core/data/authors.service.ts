@@ -117,7 +117,7 @@ export class AuthorsService {
         
       }
       private async createDatabase(db) {
-        
+        const self=this;
         db.run("CREATE TABLE tableAuthors (id INTEGER PRIMARY KEY AUTOINCREMENT,Author, NobelId, BookerId, BGId );");
         var dataSearched=  this.booker.search(null);
       //   dataSearched = dataSearched.map(function(val) {
@@ -128,28 +128,44 @@ export class AuthorsService {
       // });
         //window.alert('before' + JSON.stringify(dataSearched));
         dataSearched.forEach(a=>{
-        db.run("INSERT INTO tableAuthors(Author, BookerId) VALUES (?,?)", [a.Author,-1]);
+          const existingId= self.FindAuthor(a.Author,db);
+          if( existingId == null)
+            db.run("INSERT INTO tableAuthors(Author, BookerId) VALUES (?,?)", [a.Author,-1]);
+          else
+            db.run("update tableAuthors set BookerId =-1 where id = "+ existingId );
         });
         
         dataSearched=  this.nobel.search(null);
         dataSearched.forEach(a=>{
-          db.run("INSERT INTO tableAuthors(Author, NobelId) VALUES (?,?)", [a.Author,-1]);
-          });
+          const existingId= self.FindAuthor(a.Author,db);
+          if( existingId == null)
+            db.run("INSERT INTO tableAuthors(Author, NobelId) VALUES (?,?)", [a.Author,-1]);
+          else
+            db.run("update tableAuthors set NobelId =-1 where id = "+ existingId );
+          
+          })
+          ;
           
         dataSearched=  this.bg.search(null);
         dataSearched.forEach(a=>{
-          db.run("INSERT INTO tableAuthors(Author, BGId) VALUES (?,?)", [a.Author,-1]);
+          const existingId= self.FindAuthor(a.Author,db);
+          if( existingId == null)
+            db.run("INSERT INTO tableAuthors(Author, BGId) VALUES (?,?)", [a.Author,-1]);
+          else
+            db.run("update tableAuthors set BGId =-1 where id = "+ existingId );
           });
         
         
         
 
       }
-      public  FindAuthor(name:string):number{
-        let id:number;
+      public  FindAuthor(name:string, db:any = null):number{
+        let id:number = null;
         let sql="SELECT * FROM tableAuthors where Author='"+ name.replace("'","''") +"'";
-        
-        var stmt = this.dbAuthors.prepare(sql); 
+        if(db == null){
+          db=this.dbAuthors;
+        }
+        var stmt = db.prepare(sql); 
         while (stmt.step()) {
           //
           var row = stmt.getAsObject();
