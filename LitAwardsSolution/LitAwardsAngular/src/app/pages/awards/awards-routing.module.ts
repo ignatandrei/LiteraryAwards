@@ -5,6 +5,7 @@ import { AwardsComponent } from './awards.component';
 import { NobelTableComponent  } from './nobel/nobelAll.component';
 import { BookerAllComponent } from './booker/booker-all.component';
 import { BillgatesComponent } from './billgates/billgates.component';
+import { ReadingStatusAuthorComponent } from '../reading-status-author/reading-status-author.component';
 
 const routes: Routes = [{
   path: '',
@@ -33,5 +34,6 @@ export const routedComponents = [
   AwardsComponent ,
   NobelTableComponent ,
   BookerAllComponent,
-  BillgatesComponent
+  BillgatesComponent,
+  ReadingStatusAuthorComponent
 ];

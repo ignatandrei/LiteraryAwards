@@ -21,7 +21,7 @@ import { ReadingStatusAuthorComponent } from '../reading-status-author/reading-s
   ],
   declarations: [
     ...routedComponents,
-    ReadingStatusAuthorComponent
+    
   ],
   providers: [
     NobelService,
