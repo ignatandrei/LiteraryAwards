@@ -3,7 +3,7 @@ import { ReadingStatusAuthorComponent } from './reading-status-author.component'
 import { NbBadgeModule } from '@nebular/theme';
 
 @NgModule({
-    imports:[NbBadgeModule]
+    imports:[NbBadgeModule],
   declarations: [ReadingStatusAuthorComponent],
   exports: [ReadingStatusAuthorComponent]
 })
