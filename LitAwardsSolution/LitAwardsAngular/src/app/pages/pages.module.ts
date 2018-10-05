@@ -9,10 +9,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NbListModule, NbBadgeModule } from '@nebular/theme/';
 import { AwardsModule } from './awards/awards.module';
 import { AuthorsModule } from './authors/authors.module';
+import { ReadingStatusAuthorComponent } from './reading-status-author/reading-status-author.component';
+import { SharedReadingStatusModule } from './reading-status-author/SharedReadingStatusModule';
 
 
 const PAGES_COMPONENTS = [
   PagesComponent,
+  
 ];
 
 @NgModule({
@@ -25,8 +28,10 @@ const PAGES_COMPONENTS = [
     MiscellaneousModule,
     NgbModule.forRoot(),
     NbListModule,    
-    NbBadgeModule
+    NbBadgeModule,
+    SharedReadingStatusModule
   ],
+  
   declarations: [
     ...PAGES_COMPONENTS,
   ],

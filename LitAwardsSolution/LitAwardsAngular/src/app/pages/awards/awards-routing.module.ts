@@ -35,5 +35,5 @@ export const routedComponents = [
   NobelTableComponent ,
   BookerAllComponent,
   BillgatesComponent,
-  ReadingStatusAuthorComponent
+  
 ];

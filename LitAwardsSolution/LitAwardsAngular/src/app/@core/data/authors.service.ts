@@ -53,8 +53,8 @@ export class AuthorsService {
           }
         );
       }
-      public  test(){
-        
+      public  SelectAllAuthors() : any[]{
+        var ret=[];
         let sql="SELECT * FROM tableAuthors ";
         
         var stmt = this.dbAuthors.prepare(sql); 
@@ -62,9 +62,11 @@ export class AuthorsService {
           //
           var row = stmt.getAsObject();
           console.log(JSON.stringify(row));
+          ret.push(row);
           
         }        
         stmt.free();
+        return ret;
       }
       public  UpdateReadList(idAuthor: number,read:boolean ):void{
         if(read){

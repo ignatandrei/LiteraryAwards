@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NbAccordionModule, NbListModule, NbBadgeModule } from '@nebular/theme';
 import { BookerService } from '../../@core/data/booker.service';
 import { ReadingStatusAuthorComponent } from '../reading-status-author/reading-status-author.component';
+import { SharedReadingStatusModule } from '../reading-status-author/SharedReadingStatusModule';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { ReadingStatusAuthorComponent } from '../reading-status-author/reading-s
     NgbModule.forRoot(),
     NbAccordionModule,
     NbListModule,
-    NbBadgeModule
+    NbBadgeModule,
+    SharedReadingStatusModule
   ],
   declarations: [
     ...routedComponents,
@@ -29,3 +31,5 @@ import { ReadingStatusAuthorComponent } from '../reading-status-author/reading-s
   ],
 })
 export class AwardsModule { }
+
+

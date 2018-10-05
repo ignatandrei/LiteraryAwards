@@ -1,3 +1,15 @@
 <p>
-  authors works!
+  There are {{authors?.length}} / read {{numberAuthorsRead}}
 </p>
+<ng-template ngFor let-author [ngForOf]="authors">
+
+  <nb-card>
+    <nb-card-header>
+      Author:{{author.Author}}  
+      
+       <reading-status-author [author]="author" (onChangeRead)="changeRead($event)"  ></reading-status-author>  
+      
+    </nb-card-header>
+    
+  </nb-card>
+</ng-template>
