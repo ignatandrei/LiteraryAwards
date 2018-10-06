@@ -55,14 +55,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Booker',
         
         link: '/pages/awards/booker',
-      },
+      },     
+    ],
+  },
+  {
+    title: 'Best of...',
+    icon: 'nb-list',
+    children: [    
       {
-        title: 'Bill Gates books',
+        title: 'Bill Gates',
         
         link: '/pages/awards/bg',
       },
     ],
-  },
+  }
   ,
   
 ];
