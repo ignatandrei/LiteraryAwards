@@ -1,0 +1,26 @@
+<p>
+
+</p>
+<nb-card>
+  <nb-card-header>
+    Books taken from <a href='http://serviciipeweb.ro/propriu/best-of/'>Ignat Andrei</a> reviews
+    <nb-badge text= " {{numberAuthorsRead}} / {{source?.length}} " status="danger" position="top left"></nb-badge>
+  </nb-card-header>
+
+
+</nb-card>
+<ng-template ngFor let-author [ngForOf]="source">
+
+  <nb-card>
+    <nb-card-header>
+      Author: {{author.Author}} 
+      
+      <reading-status-author [author]="author" (onChangeRead)="changeRead($event)"  ></reading-status-author>
+      
+      
+    </nb-card-header>
+    <nb-card-body>
+      Book(s) : {{author.bookName}}
+    </nb-card-body>
+  </nb-card>
+</ng-template>
