@@ -9,7 +9,7 @@ export class IAService {
   
     db: any;
     public version: string = environment.VERSION;
-    numberBGAuthors():number{
+    numberAuthors():number{
         let val = 0;
     var stmt = this.db.prepare("SELECT count(*) as Nr FROM tableAuthors");
     while (stmt.step()) {

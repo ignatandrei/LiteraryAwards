@@ -67,6 +67,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
         
         link: '/pages/awards/bg',
       },
+      {
+        title: 'Ignat Andrei',
+        
+        link: '/pages/awards/iaf',
+      },
     ],
   }
   ,

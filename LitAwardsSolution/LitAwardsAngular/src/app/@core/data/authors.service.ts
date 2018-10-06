@@ -4,13 +4,14 @@ import { environment } from "../../../environments/environment";
 import { NobelService } from "./nobel.service";
 import { BookerService } from "./booker.service";
 import { BGService } from "./bg.service";
+import { IAService } from "./ia.service";
 
 declare var SQL: any;
 
 @Injectable()
 export class AuthorsService {
 
-  constructor(private nobel: NobelService,private booker: BookerService,private bg: BGService ) {
+  constructor(private nobel: NobelService,private booker: BookerService,private bg: BGService, private iaf:IAService ) {
     
     
   }
@@ -101,26 +102,9 @@ export class AuthorsService {
         return ids;
 
       }
-      private  HowMuchRead(){
-        
-        let ids=this.AllRead();
-        let sql='select sum(coalesce(NobelId,0)), sum(coalesce(BookerId,0)) as BookerId, sum(coalesce(BGId,0)) as BGId from tableAuthors  ';
-        //TODO: where id in ids
-        let stmt = this.dbAuthors.prepare(sql); 
-        while (stmt.step()) {
-          //
-          var row = stmt.getAsObject();
-          stmt.free();
-          return row;
-          
-        }        
-        
-
-        
-      }
-      private async createDatabase(db) {
+       async createDatabase(db) {
         const self=this;
-        db.run("CREATE TABLE tableAuthors (id INTEGER PRIMARY KEY AUTOINCREMENT,Author, NobelId, BookerId, BGId );");
+        db.run("CREATE TABLE tableAuthors (id INTEGER PRIMARY KEY AUTOINCREMENT,Author, NobelId, BookerId, BGId , IAFId);");
         var dataSearched=  this.booker.search(null);
       //   dataSearched = dataSearched.map(function(val) {
       //     return {
@@ -157,7 +141,15 @@ export class AuthorsService {
             db.run("update tableAuthors set BGId =-1 where id = "+ existingId );
           });
         
-        
+          dataSearched=  this.iaf.search(null);
+          dataSearched.forEach(a=>{
+            const existingId= self.FindAuthor(a.Author,db);
+            if( existingId == null)
+              db.run("INSERT INTO tableAuthors(Author, IAFId) VALUES (?,?)", [a.Author,-1]);
+            else
+              db.run("update tableAuthors set IAFId =-1 where id = "+ existingId );
+            });
+          
         
 
       }

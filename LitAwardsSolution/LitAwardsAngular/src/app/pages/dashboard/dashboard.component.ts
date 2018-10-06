@@ -6,6 +6,7 @@ import { BookerService } from '../../@core/data/booker.service';
 import { BGService } from '../../@core/data/bg.service';
 import { environment } from '../../../environments/environment';
 import { AuthorsService } from '../../@core/data/authors.service';
+import { IAService } from '../../@core/data/ia.service';
 
 interface CardSettings {
   title: string;
@@ -82,11 +83,13 @@ export class DashboardComponent implements OnDestroy , OnInit{
   nobelAuthors: number;
   bookerAuthors: number;
   BGAuthors: number;
+  IAFAuthors: number;
   constructor(private themeService: NbThemeService, 
     private search:NbSearchService, 
     private nobel: NobelService, 
     private booker: BookerService,
     private bg: BGService,
+    private iaf: IAService,
     private gameService: AuthorsService
     ) {
     var self=this;
@@ -117,11 +120,13 @@ export class DashboardComponent implements OnDestroy , OnInit{
     this.nobel.CreateOrGetDb();//.then(()=>self.nobelAuthors =nobel.numberNobelAuthors());
     this.booker.CreateOrGetDb();//.then(()=>self.bookerAuthors=booker.numberBookerAuthors());
     this.bg.CreateOrGetDb();
+    this.iaf.CreateOrGetDb();
     //TODO: wait async for all, instead of waiting 3 seconds
     window.setTimeout  (function(){
      self.nobelAuthors =self.nobel.numberNobelAuthors();
      self.bookerAuthors=self.booker.numberBookerAuthors();
      self.BGAuthors=self.bg.numberBGAuthors();
+     self.IAFAuthors  = self.iaf.numberAuthors();
      self.gameService.CreateOrGetDb();
     },3000);
   }

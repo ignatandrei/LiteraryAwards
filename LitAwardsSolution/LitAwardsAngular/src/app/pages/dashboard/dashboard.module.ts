@@ -9,6 +9,7 @@ import { BookerService } from '../../@core/data/booker.service';
 import { RouterModule } from '@angular/router';
 import { BGService } from '../../@core/data/bg.service';
 import { AuthorsService } from '../../@core/data/authors.service';
+import { IAService } from '../../@core/data/ia.service';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { AuthorsService } from '../../@core/data/authors.service';
     NobelService,
     BookerService,
     BGService,
-    AuthorsService
+    AuthorsService,
+    IAService
     
   ],
 })

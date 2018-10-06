@@ -72,168 +72,158 @@ export class IAData {
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "William Gibson",
-      "Peter J. King D. Phil."
+      "Diogenes Laertius",
+      "The Lives and Opinions of Eminent Philosophers"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "One Hundred PhilosophersThe Life and Work of the World&#39;s Greatest Thinkers",
-      "Diogenes Laertius"
+      "Kaiten Nukariya",
+      "Religion of the SamuraiA Study of Zen Philosophy and Discipline in China"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "The Lives and Opinions of Eminent Philosophers",
-      "Kaiten Nukariya"
+      "Henri Brunel",
+      "Les plus beaux contes zenLe bonheur zen"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Religion of the SamuraiA Study of Zen Philosophy and Discipline in China",
-      "Henri Brunel"
+      "Thomas Cathcart, Daniel Klein",
+      "Aristotle and an Aardvark Go to Washington"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Les plus beaux contes zenLe bonheur zen",
-      "Thomas Cathcart, Daniel Klein"
+      "Thomas Cleary",
+      "Zen Antics (9780877739449)"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Aristotle and an Aardvark Go to Washington",
-      "Thomas Cleary"
+      "Michael Crichton",
+      "Sphere"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Zen Antics (9780877739449)",
-      "Michael Crichton"
+      "Jack London",
+      "The Sea-Wolf and Selected Stories100th Anniversary Edition (9780451529367)"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Sphere",
-      "Jack London"
+      "Agatha Christie",
+      "And Then There Were None"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "The Sea-Wolf and Selected Stories100th Anniversary Edition (9780451529367)",
-      "Agatha Christie"
+      "Stephen King",
+      "Christine (Signet)"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "And Then There Were None",
-      "Stephen King"
+      "Simon Singh",
+      "Code Book, TheThe Secret History of Codes and Code-breaking"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Christine (Signet)",
-      "Simon Singh"
+      "Sherry Argov",
+      "Why Men Love BitchesFrom Doormat to Dreamgirl_A Woman&#39;s Guide to Holding Her Own in a Relationship"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Code Book, TheThe Secret History of Codes and Code-breaking",
-      "Sherry Argov"
+      "Peter S. Beagle",
+      "The Last Unicorn"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Why Men Love BitchesFrom Doormat to Dreamgirl_A Woman&#39;s Guide to Holding Her Own in a Relationship",
-      "Peter S. Beagle"
+      "Steven; Dubner, Stephen J. Levitt",
+      "FreakonomicsA Rogue Economist Explores the Hidden Side of Everything"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "The Last Unicorn",
-      "Steven; Dubner, Stephen J. Levitt"
+      "Pearl S. Buck",
+      "The Mother"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "FreakonomicsA Rogue Economist Explores the Hidden Side of Everything",
-      "Pearl S. Buck"
+      "Malcolm Gladwell",
+      "The Tipping PointHow Little Things Can Make a Big Difference"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "The Mother",
-      "Malcolm Gladwell"
+      "Auguste de Villiers de l&#39;Isle-Adam",
+      "Contes Cruels (9780559895906)"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "The Tipping PointHow Little Things Can Make a Big Difference",
-      "Auguste de Villiers de l&#39;Isle-Adam"
+      "Stuart Crainer, Des Dearlove",
+      "The Ultimate Business Guru GuideThe Greatest Thinkers Who Made Management"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Contes Cruels (9780559895906)",
-      "Stuart Crainer, Des Dearlove"
+      "Douglas Mook",
+      "Classic Experiments in Psychology (9780313318214)"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "The Ultimate Business Guru GuideThe Greatest Thinkers Who Made Management",
-      "Douglas Mook"
+      "Peter F. Drucker",
+      "The Effective Executive"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Classic Experiments in Psychology (9780313318214)",
-      "Peter F. Drucker"
+      "Jim Collins",
+      "Good to GreatWhy Some Companies Make the Leap and Others Don&#39;t (8601300383743)"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "The Effective Executive",
-      "Jim Collins"
+      "Jean Bott&#39;ro",
+      "Plus Belle Histoire de Dieu. Qui Est Le Dieu de La Bible ?(La) (English and French Edition)"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Good to GreatWhy Some Companies Make the Leap and Others Don&#39;t (8601300383743)",
-      "Jean Bott&#39;ro"
+      "Greg Egan",
+      "Quarantine"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Plus Belle Histoire de Dieu. Qui Est Le Dieu de La Bible ?(La) (English and French Edition)",
-      "Greg Egan"
+      "Paul Martin",
+      "Sex, Drugs and Chocolate"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Quarantine",
-      "Paul Martin"
+      "Osho",
+      "Meetings with Remarkable People"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Sex, Drugs and Chocolate",
-      "Osho"
+      "Philip Zimbardo",
+      "The Lucifer EffectUnderstanding How Good People Turn Evil"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Meetings with Remarkable People",
-      "Philip Zimbardo"
+      "Stephen King",
+      "The Shining"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "The Lucifer EffectUnderstanding How Good People Turn Evil",
-      "Stephen King"
+      "Daniel Kahneman",
+      "Thinking, Fast and Slow"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "The Shining",
-      "Daniel Kahneman"
+      "Peter Bregman",
+      "18 MinutesFind Your Focus, Master Distraction, and Get the Right Things Done"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Thinking, Fast and Slow",
-      "Peter Bregman"
+      "Adele Faber, Elaine Mazlish",
+      "How to Talk So Kids Will Listen &amp; Listen So Kids Will Talk"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "18 MinutesFind Your Focus, Master Distraction, and Get the Right Things Done",
-      "Adele Faber, Elaine Mazlish"
+      "Nigel Benson, Joannah Ginsburg, Voula Grand, Merrin Lazyan, Marcus Weeks, Catherine Collin",
+      "The Psychology BookBig Ideas Simply Explained"
     ]);
 
     db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "How to Talk So Kids Will Listen &amp; Listen So Kids Will Talk",
-      "Nigel Benson, Joannah Ginsburg, Voula Grand, Merrin Lazyan, Marcus Weeks, Catherine Collin"
-    ]);
-
-    db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "The Psychology BookBig Ideas Simply Explained",
-      "Travis Bradberry, Jean Greaves, Patrick M. Lencioni"
-    ]);
-
-    db.run("INSERT INTO tableAuthors(Author, bookName) VALUES (?,?)", [
-      "Emotional Intelligence 2.0",
-      ""
+      "Travis Bradberry, Jean Greaves, Patrick M. Lencioni",
+      "Emotional Intelligence 2.0"
     ]);
   }
 }

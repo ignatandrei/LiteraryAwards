@@ -6,6 +6,7 @@ import { NobelTableComponent  } from './nobel/nobelAll.component';
 import { BookerAllComponent } from './booker/booker-all.component';
 import { BillgatesComponent } from './billgates/billgates.component';
 import { ReadingStatusAuthorComponent } from '../reading-status-author/reading-status-author.component';
+import { ignatandreiComponent } from './ignatandrei/ignatandrei.component';
 
 const routes: Routes = [{
   path: '',
@@ -20,7 +21,10 @@ const routes: Routes = [{
   },{
     path: 'booker',
     component: BookerAllComponent,
-  }],
+  },{
+    path: 'iaf',
+    component: ignatandreiComponent ,
+  },],
   
 }];
 
@@ -35,5 +39,6 @@ export const routedComponents = [
   NobelTableComponent ,
   BookerAllComponent,
   BillgatesComponent,
+  ignatandreiComponent
   
 ];
