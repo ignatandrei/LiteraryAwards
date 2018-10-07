@@ -107,6 +107,7 @@ export class DashboardComponent implements OnDestroy , OnInit{
         var dataSearched=  self.booker.search(self.searchTerm);
         dataSearched.push(...self.nobel.search(self.searchTerm));
         dataSearched.push(...self.bg.search(self.searchTerm));
+        dataSearched.push(...self.iaf.search(self.searchTerm));
         self.searchAuthors = dataSearched.sort((a,b)=>{
           return  a.Author.localeCompare(b.Author);          
         });
