@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { BGService } from '../../@core/data/bg.service';
 import { AuthorsService } from '../../@core/data/authors.service';
 import { IAService } from '../../@core/data/ia.service';
+import { PetersonService } from '../../@core/data/peterson.service';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { IAService } from '../../@core/data/ia.service';
     BookerService,
     BGService,
     AuthorsService,
-    IAService
+    IAService,
+    PetersonService
     
   ],
 })

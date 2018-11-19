@@ -7,6 +7,7 @@ import { BGService } from '../../@core/data/bg.service';
 import { environment } from '../../../environments/environment';
 import { AuthorsService } from '../../@core/data/authors.service';
 import { IAService } from '../../@core/data/ia.service';
+import { PetersonService } from '../../@core/data/peterson.service';
 
 interface CardSettings {
   title: string;
@@ -84,13 +85,15 @@ export class DashboardComponent implements OnDestroy , OnInit{
   bookerAuthors: number;
   BGAuthors: number;
   IAFAuthors: number;
+  PetAuthors: number;
   constructor(private themeService: NbThemeService, 
     private search:NbSearchService, 
     private nobel: NobelService, 
     private booker: BookerService,
     private bg: BGService,
     private iaf: IAService,
-    private gameService: AuthorsService
+    private gameService: AuthorsService,
+    private petService: PetersonService
     ) {
     var self=this;
     this.themeService.getJsTheme()
@@ -122,12 +125,14 @@ export class DashboardComponent implements OnDestroy , OnInit{
     this.booker.CreateOrGetDb();//.then(()=>self.bookerAuthors=booker.numberBookerAuthors());
     this.bg.CreateOrGetDb();
     this.iaf.CreateOrGetDb();
+    this.petService.CreateOrGetDb();
     //TODO: wait async for all, instead of waiting 3 seconds
     window.setTimeout  (function(){
      self.nobelAuthors =self.nobel.numberNobelAuthors();
      self.bookerAuthors=self.booker.numberBookerAuthors();
      self.BGAuthors=self.bg.numberBGAuthors();
      self.IAFAuthors  = self.iaf.numberAuthors();
+     self.PetAuthors= self.petService.numberAuthors();
      self.gameService.CreateOrGetDb();
     },3000);
   }

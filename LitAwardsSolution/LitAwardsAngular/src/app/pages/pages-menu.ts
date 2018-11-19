@@ -72,6 +72,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
         
         link: '/pages/awards/iaf',
       },
+      
+      {
+        title: 'Jordan B Peterson',
+        
+        link: '/pages/awards/jbp',
+      },
     ],
   }
   ,
